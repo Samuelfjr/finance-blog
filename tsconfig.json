@@ -15,9 +15,9 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@/fonts": ["./styles/fonts"]
+      "@/fonts": ["./styles/fonts"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Header/Header.jsx", "src/pages/index.jsx", "src/pages/_document.jsx", "src/pages/_app.jsx"],
   "exclude": ["node_modules"]
 }
