@@ -1,0 +1,26 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include device(notebook) {
+        font-size: 60%;
+    }
+
+    @include device(mobile) {
+        font-size: 58%;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+}
+
