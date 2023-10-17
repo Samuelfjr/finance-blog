@@ -1,6 +1,32 @@
 @import '../../styles/variables.scss';
 
 .header {
-    background-color: $color-primary-eight;
-    text-align: center;
+    background-color: $base-primary-color;
+    height: 9rem; 
+    padding-top: 2rem;
+
+    .containerHeader {
+        max-width: 1140px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        padding: 1rem;
+        margin: auto;
+    }
+
+    .navBar {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: 3rem;
+     
+        a {
+            text-decoration: none;
+            color: $navigation-text-color;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
 }
