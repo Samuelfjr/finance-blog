@@ -1,0 +1,97 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.page {
+    background: $bg-highlight;
+    height: 2000px;
+
+    .containerPage {
+        max-width: 1140px;
+        margin: auto;
+        padding-top: $padding-top;
+
+        .supportMaterial {
+            @include flex-center;
+            flex-direction: column;
+            gap: 7rem;
+    
+            .title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+        
+                h1 {
+                    color: $base-primary-color;
+                    font-size: 40px;
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+            
+            .backingCardContainer {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 70px;
+                align-self: stretch;
+
+                .card {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    max-width: 367px;
+                    
+                    .partCard {
+                        position: absolute;
+                        display: flex;
+                        padding: 50px 33px 20px 33px;
+                        flex-direction: column;
+                        align-self: stretch;
+                        border-radius: 20px 20px 0px 0px;
+                        background-color: $color-primary;
+                        top: 17rem;
+                        z-index: 10;
+
+                        h3 {
+                            width: 100%;
+                            color: $color-primary-eight;
+                            font-size: 20px;
+                            font-weight: 600;
+                            padding-bottom: 25px;
+                        }
+
+                        p {
+                            color: $quarternary-text-color;
+                            font-size: 16px;
+                            font-weight: 400;
+                            padding-bottom: 25px;
+                        }
+
+                        .buttonContent {
+                            @include flex-center;
+                            width: 100%;
+                            margin: 0 auto;
+                            padding: 8px 16px;
+                            
+                            border-radius: 10px;
+                            border: 1px solid $color-primary-eight;
+                            
+                            a {
+                                font-size: 18px;
+                                font-weight: 500;
+                                color: $color-primary-eight;
+                                text-decoration: none;
+    
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+}
