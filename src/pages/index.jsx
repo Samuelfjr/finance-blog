@@ -53,11 +53,14 @@ export default function Home() {
                 <Link className={roboto.className} href='/'>Acessar Conteúdo</Link>
               </div>
             </div>
-
           </div>
-
-         
         </div>
+
+        
+        <div className={styles.allSupportMaterials}>
+            <Link className={roboto.className} href='/'>Ver todos Materias de Apoio</Link>
+        </div>
+
         
       </section>
 
