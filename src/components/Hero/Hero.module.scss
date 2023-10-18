@@ -1,59 +1,59 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .hero {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+
+  .containerHero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+
+  .legend {
+    position: absolute;
+    width: 100%;
+    @include flex-center;
     flex-direction: column;
+    gap: 34rem;
+    margin-top: 130px;
 
-    .containerHero {
-        position: relative;
-        width: 100%;
-        height: 600px;  
+    .containerLegend {
+      flex-direction: column;
+      @include flex-center;
+      gap: 15px;
+
+      h1 {
+        font-size: 48px;
+        color: $color-primary-three;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 24px;
+        color: $navigation-text-color;
+        font-weight: 600;
+      }
     }
 
-    .legend {
-        position: absolute;
-        width: 100%;
-        @include flex-center;
-        flex-direction: column;
-        gap: 34rem;
-        margin-top: 130px;
+    .containerSearchBar {
+      width: 365px;
+      max-width: 365px;
+      display: flex;
+      padding: 16px 8px 5px 8px;
+      justify-content: space-between;
+      align-items: center;
 
-        .containerLegend {
-            flex-direction: column;
-            @include flex-center;
-            gap: 15px;
-            
-            h1 {
-                font-size: 48px;
-                color: $color-primary-three;
-                font-weight: 700;
-            }
-    
-            h4 {
-                font-size: 24px;
-                color: $navigation-text-color;
-                font-weight: 600;
-            }
-        }
-        
-        .containerSearchBar {
-            width: 365px;
-            max-width: 365px;
-            display: flex;
-            padding: 16px 8px 5px 8px;
-            justify-content: space-between;
-            align-items: center;
+      border-radius: 1rem;
+      background: #fff;
 
-            border-radius: 1rem;
-            background: #FFF;
-          
-            .searchBar {
-                font-size: 18px;
-                background: none;
-                outline: none;
-                border: 0;
-            }
-        }
+      .searchBar {
+        font-size: 18px;
+        background: none;
+        outline: none;
+        border: 0;
+      }
     }
+  }
 }
