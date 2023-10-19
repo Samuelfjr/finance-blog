@@ -122,6 +122,229 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.cardsArticles}>
+          <div className={styles.cards}>
+            <div className={styles.card}>
+              <Image src="/dollar.jpg" width={367} height={200} alt="dólar" />
+
+              <div className={styles.partCard}>
+                <div className={styles.containerCategory}>
+                  <h4>Para simplificar a vida</h4>
+                </div>
+                <h3 className={sora.className}>Conheça as mudanças do MEI</h3>
+
+                <div className={styles.containerDate}>
+                  <h4 className={roboto.className}>10/11/2023</h4>
+                </div>
+
+                <p className={roboto.className}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut
+                </p>
+
+                <div className={styles.continue}>
+                  <Link className={roboto.className} href="/">
+                    Continuar lendo
+                    <Image
+                      className={styles.arrow}
+                      src="/continue.svg"
+                      alt=""
+                      width={15}
+                      height={12}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.card}>
+              <Image
+                src="/man-writing.jpg"
+                width={367}
+                height={200}
+                alt="homem escrevendo"
+              />
+
+              <div className={styles.partCard}>
+                <div className={styles.containerCategory}>
+                  <h4>Para simplificar a vida</h4>
+                </div>
+                <h3 className={sora.className}>Conheça as mudanças do MEI</h3>
+
+                <div className={styles.containerDate}>
+                  <h4 className={roboto.className}>10/11/2023</h4>
+                </div>
+
+                <p className={roboto.className}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut
+                </p>
+
+                <div className={styles.continue}>
+                  <Link className={roboto.className} href="/">
+                    Continuar lendo
+                    <Image
+                      className={styles.arrow}
+                      src="/continue.svg"
+                      alt=""
+                      width={15}
+                      height={12}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={styles.card}>
+              <Image src="/laptop.jpg" width={367} height={200} alt="laptop" />
+
+              <div className={styles.partCard}>
+                <div className={styles.containerCategory}>
+                  <h4>Para simplificar a vida</h4>
+                </div>
+                <h3 className={sora.className}>Conheça as mudanças do MEI</h3>
+
+                <div className={styles.containerDate}>
+                  <h4 className={roboto.className}>10/11/2023</h4>
+                </div>
+
+                <p className={roboto.className}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut
+                </p>
+
+                <div className={styles.continue}>
+                  <Link className={roboto.className} href="/">
+                    Continuar lendo
+                    <Image
+                      className={styles.arrow}
+                      src="/continue.svg"
+                      alt=""
+                      width={15}
+                      height={12}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={styles.card}>
+              <Image
+                src="/currency-dollar.jpg"
+                width={367}
+                height={200}
+                alt="moedas e dólar"
+              />
+
+              <div className={styles.partCard}>
+                <div className={styles.containerCategory}>
+                  <h4>Para simplificar a vida</h4>
+                </div>
+                <h3 className={sora.className}>Conheça as mudanças do MEI</h3>
+
+                <div className={styles.containerDate}>
+                  <h4 className={roboto.className}>10/11/2023</h4>
+                </div>
+
+                <p className={roboto.className}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut
+                </p>
+
+                <div className={styles.continue}>
+                  <Link className={roboto.className} href="/">
+                    Continuar lendo
+                    <Image
+                      className={styles.arrow}
+                      src="/continue.svg"
+                      alt=""
+                      width={15}
+                      height={12}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={styles.card}>
+              <Image
+                src="/cell-phone.jpg"
+                width={367}
+                height={200}
+                alt="celular"
+              />
+
+              <div className={styles.partCard}>
+                <div className={styles.containerCategory}>
+                  <h4>Para simplificar a vida</h4>
+                </div>
+                <h3 className={sora.className}>Conheça as mudanças do MEI</h3>
+
+                <div className={styles.containerDate}>
+                  <h4 className={roboto.className}>10/11/2023</h4>
+                </div>
+
+                <p className={roboto.className}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut
+                </p>
+
+                <div className={styles.continue}>
+                  <Link className={roboto.className} href="/">
+                    Continuar lendo
+                    <Image
+                      className={styles.arrow}
+                      src="/continue.svg"
+                      alt=""
+                      width={15}
+                      height={12}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={styles.card}>
+              <Image
+                src="/coin-piggy.jpg"
+                width={367}
+                height={200}
+                alt="porquinho de moedas"
+              />
+
+              <div className={styles.partCard}>
+                <div className={styles.containerCategory}>
+                  <h4>Para simplificar a vida</h4>
+                </div>
+                <h3 className={sora.className}>Conheça as mudanças do MEI</h3>
+
+                <div className={styles.containerDate}>
+                  <h4 className={roboto.className}>10/11/2023</h4>
+                </div>
+
+                <p className={roboto.className}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut
+                </p>
+
+                <div className={styles.continue}>
+                  <Link className={roboto.className} href="/">
+                    Continuar lendo
+                    <Image
+                      className={styles.arrow}
+                      src="/continue.svg"
+                      alt=""
+                      width={15}
+                      height={12}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={styles.allArticles}>
+              <Link className={roboto.className} href="/">
+                Ver todos os Artigos
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

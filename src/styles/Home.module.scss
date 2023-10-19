@@ -3,7 +3,7 @@
 
 .page {
   background: $bg-highlight;
-  height: 2000px;
+  height: 4660px;
 
   .containerPage {
     max-width: 1140px;
@@ -167,6 +167,116 @@
               text-decoration: none;
             }
           }
+        }
+      }
+    }
+
+    .cardsArticles {
+      width: 100%;
+      padding-top: $padding-top;
+      display: inline-flex;
+      align-items: flex-start;
+      max-width: 1148px;
+
+      .cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 11px;
+
+        .card {
+          width: 100%;
+          max-width: 367px;
+          position: relative;
+          display: flex;
+          padding: 0px 4px;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 30rem;
+
+          .partCard {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            padding: 50px 33px;
+            flex-direction: column;
+            border-radius: 20px 20px 0px 0px;
+            background-color: $color-primary;
+            top: 17rem;
+            z-index: 10;
+
+            .containerCategory {
+              width: 43%;
+              display: flex;
+              padding: 2px 6px 2px 4px;
+              align-items: flex-start;
+              border-radius: 4px;
+              background: $color-primary-eight;
+
+              h4 {
+                font-size: 12px;
+                font-weight: 700;
+                color: $color-primary;
+                line-height: 125%;
+              }
+            }
+
+            h3 {
+              padding-top: 8px;
+              align-self: stretch;
+              color: $base-primary-color;
+              font-size: 20px;
+              font-weight: 600;
+            }
+
+            .containerDate {
+              padding: 15px 0 25px 0;
+
+              h4 {
+                color: $tertiary-text-color;
+                font-size: 12px;
+                font-weight: 600;
+              }
+            }
+
+            p {
+              width: 100%;
+              color: $quarternary-text-color;
+              font-size: 16px;
+              font-weight: 400;
+            }
+
+            .continue {
+              width: 100%;
+              display: flex;
+              padding-top: 2rem;
+              justify-content: flex-end;
+              align-items: center;
+
+              a {
+                text-decoration: none;
+                color: $color-primary-eight;
+                font-size: 14px;
+                font-weight: 400;
+
+                .arrow {
+                  margin-left: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .allArticles {
+        width: 100%;
+        @include flex-center;
+        padding-top: 4rem;
+
+        a {
+          color: $color-primary-eight;
+          font-size: 16px;
+          font-weight: 400;
+          text-decoration: none;
         }
       }
     }
