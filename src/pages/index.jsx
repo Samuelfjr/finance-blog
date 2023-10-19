@@ -356,9 +356,11 @@ export default function Home() {
                 height={260}
               />
             </div>
-            <div>
-              <h2>Você conhece Rubens Figueiredo?</h2>
-              <p>
+            <div className={styles.text}>
+              <h2 className={sora.className}>
+                Você conhece Rubens Figueiredo?
+              </h2>
+              <p className={roboto.className}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut{" "}
               </p>
