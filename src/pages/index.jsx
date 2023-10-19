@@ -345,6 +345,26 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.about}>
+          <div className={styles.containerAbout}>
+            <div>
+              <Image
+                src="/perfil.jpg"
+                alt="foto de perfil do autor"
+                width={290}
+                height={260}
+              />
+            </div>
+            <div>
+              <h2>Você conhece Rubens Figueiredo?</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut{" "}
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
