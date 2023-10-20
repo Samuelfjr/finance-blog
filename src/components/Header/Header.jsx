@@ -1,20 +1,14 @@
-import { roboto } from '@/styles/fonts';
-import Image from 'next/image'
-import Link from 'next/link';
+import { roboto } from "@/styles/fonts";
+import Link from "next/link";
+import Logo from "@/components/ui/Logo/logo";
 
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
 
 const Header = () => {
   return (
     <section className={styles.header}>
       <div className={styles.containerHeader}>
-
-        <Image 
-          src="/logo.svg"
-          width={360}
-          height={26}
-          alt='logo do Blog Rubens Machado'
-        />
+        <Logo />
 
         <ul className={styles.navBar}>
           <li>
@@ -26,11 +20,10 @@ const Header = () => {
           <li>
             <Link href="/">Contato</Link>
           </li>
-           <li>
+          <li>
             <Link href="/">Artigos</Link>
           </li>
-        </ul>      
- 
+        </ul>
       </div>
     </section>
   );
