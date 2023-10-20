@@ -367,6 +367,40 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.blog}>
+          <div className={styles.containerBlog}>
+            <h1 className={sora.className}>
+              Blog: O seu guia completo para dominar as finanças.
+            </h1>
+            <div className={styles.imageSubtitle}>
+              <Image
+                src="/pen-paper-ebook.jpg"
+                alt="ebook, caneta e caderno"
+                width={565}
+                height={367}
+              />
+              <div className={styles.subtitleDescription}>
+                <h3 className={sora.className}>
+                  Sua vida financeira nas suas mãos
+                </h3>
+                <p className={roboto.className}>
+                  Lorem ipsum dolor sit amet. Et dolorum reiciendis qui sunt
+                  delectus non voluptatibus quia eum temporibus alias. Et sunt
+                  asperiores et dicta quia ad illum odit. Et recusandae iure sed
+                  molestias dolor et distinctio esse et tenetur rerum. In
+                  quibusdam voluptas qui tempore fuga est quisquam reprehenderit
+                  sed necessitatibus dolor. Lorem ipsum dolor sit amet. Et
+                  dolorum reiciendis qui sunt delectus non voluptatibus quia eum
+                  temporibus alias. Et sunt asperiores et dicta quia ad illum
+                  odit. Et recusandae iure sed molestias dolor et distinctio
+                  esse et tenetur rerum. In quibusdam voluptas qui tempore fuga
+                  est quisquam reprehenderit sed necessitatibus dolor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
