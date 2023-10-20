@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  display: inline-flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  background: #fff;
+
+  .containerFooter {
+  }
+}
