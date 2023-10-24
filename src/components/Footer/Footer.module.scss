@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .footer {
+  width: 100%;
   display: inline-flex;
   padding: 10px;
   flex-direction: column;
@@ -9,5 +10,52 @@
   background: #fff;
 
   .containerFooter {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+    .containerLogo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p {
+      text-align: center;
+      padding: 2.5rem 2.5rem;
+      font-size: 14px;
+      font-weight: 500;
+      color: $base-tertiary-color;
+    }
+
+    .containerIcons {
+      width: 100%;
+      max-width: 1140px;
+      .container {
+        width: 100%;
+        max-width: 1140px;
+        display: flex;
+        align-items: center;
+
+        .instagramIcon {
+          padding-left: 1.5rem;
+        }
+        .containerBoxUp {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+
+          .boxUp {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 5px;
+            background: #121214;
+          }
+        }
+      }
+    }
   }
 }
