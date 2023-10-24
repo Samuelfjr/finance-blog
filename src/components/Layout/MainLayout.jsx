@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
       </header>
       <main>{children}</main>
       <footer>
-        <Footer /> 
+        <Footer />
         <Copy />
       </footer>
     </>

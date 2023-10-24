@@ -7,7 +7,7 @@ import Logo from "../ui/Logo/logo";
 
 const Footer = () => {
   return (
-    <section className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles.containerFooter}>
         <div className={styles.containerLogo}>
           <Logo />
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
