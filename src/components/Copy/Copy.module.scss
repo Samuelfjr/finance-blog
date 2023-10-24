@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.copy {
+  display: flex;
+  width: 100%;
+  padding: 0px 150px 11px 150px;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+
+  .containerCopy {
+    @include flex-center;
+
+    width: 100%;
+    max-width: 1140px;
+    padding: 1.5rem;
+
+    p {
+      color: $base-primary-color;
+    }
+  }
+}

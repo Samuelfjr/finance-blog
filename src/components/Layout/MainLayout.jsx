@@ -1,6 +1,8 @@
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import Footer from "@/components/Footer/Footer";
+import Copy from "@/components/Copy/Copy";
+
 import { roboto } from "@/styles/fonts";
 
 const MainLayout = ({ children }) => {
@@ -12,7 +14,8 @@ const MainLayout = ({ children }) => {
       </header>
       <main>{children}</main>
       <footer>
-        <Footer />
+        <Footer /> 
+        <Copy />
       </footer>
     </>
   );
