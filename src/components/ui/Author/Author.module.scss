@@ -1,2 +1,31 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  .image {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+  }
+
+  .content {
+    p {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name {
+      font-size: 1.5rem;
+    }
+
+    .date {
+      font-size: 1.2rem;
+      color: $quarternary-text-color;
+    }
+  }
+}
