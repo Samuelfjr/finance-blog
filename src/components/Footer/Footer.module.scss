@@ -9,10 +9,14 @@
   gap: 25px;
   background: #fff;
 
+  border-top: 2px solid $color-primary;
+
   .containerFooter {
     width: 100%;
     max-width: 1140px;
     margin: auto;
+    padding-top: 3rem;
+
     .containerLogo {
       display: flex;
       align-items: center;

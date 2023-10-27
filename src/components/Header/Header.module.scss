@@ -1,32 +1,32 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .header {
-    background-color: $base-primary-color;
-    height: 9rem; 
-    padding-top: 2rem;
+  background-color: $base-primary-color;
+  height: 9rem;
+  padding-top: 2rem;
 
-    .containerHeader {
-        max-width: 1140px;
+  .containerHeader {
+    max-width: 1140px;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-        padding: 1rem;
-        margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+    margin: auto;
+  }
+
+  .navBar {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 3rem;
+
+    a {
+      text-decoration: none;
+      color: $navigation-text-color;
+      font-size: 16px;
+      font-weight: 400;
     }
-
-    .navBar {
-        display: flex;
-        list-style: none;
-        align-items: center;
-        gap: 3rem;
-     
-        a {
-            text-decoration: none;
-            color: $navigation-text-color;
-            font-size: 16px;
-            font-weight: 400;
-        }
-    }
+  }
 }

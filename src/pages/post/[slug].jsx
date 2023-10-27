@@ -11,8 +11,7 @@ const Post = () => {
         <p>subtitulo do artigo</p>
         <Author />
       </div>
-      <article>
-        className={styles.content}
+      <article className={styles.content}>
         <div className={styles.image}></div>
         conteúdo do artigo
       </article>
