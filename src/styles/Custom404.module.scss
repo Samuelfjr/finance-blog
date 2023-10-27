@@ -1,0 +1,15 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.errorContainer {
+  width: 100%;
+  max-width: 1140px;
+  @include flex-center;
+  flex-direction: column;
+  margin: $padding-top auto;
+
+  h1 {
+    font-size: 7rem;
+    margin-bottom: 4rem;
+  }
+}

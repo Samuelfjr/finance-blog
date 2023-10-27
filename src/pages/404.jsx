@@ -1,13 +1,12 @@
 import styles from "../styles/Custom404.module.scss";
+import { roboto } from "@/styles/fonts";
+import Error from "../components/ui/Error/Error";
 
 const Custom404 = () => {
   return (
-    <section className={styles.section}>
-      <h1>Oops!! Error 404</h1>
-      <div className={styles.error}>
-        <h2>Essa página não existe.</h2>
-        <Link href="/">Voltar para artigos</Link>
-      </div>
+    <section className={styles.errorContainer}>
+      <h1 className={roboto.className}>Oops!! Error 404</h1>
+      <Error text="Essa página não existe." />
     </section>
   );
 };

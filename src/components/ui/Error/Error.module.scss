@@ -1,0 +1,15 @@
+@import "../../../styles/variables.scss";
+
+.error {
+  text-align: center;
+
+  .linkContainer {
+    margin-top: 4rem;
+
+    a {
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+    }
+  }
+}
