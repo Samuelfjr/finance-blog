@@ -1,2 +1,9 @@
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
+
+.articles {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: $padding-top;
+}

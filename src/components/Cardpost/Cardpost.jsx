@@ -1,5 +1,6 @@
 import styles from "../Cardpost/Cardpost.module.scss";
 import Author from "../ui/Author/Author";
+import Link from "next/link";
 
 const Cardpost = () => {
   return (
@@ -13,7 +14,7 @@ const Cardpost = () => {
         </p>
         <div className={styles.footer}>
           <Author />
-          <Link href={`/post/nome-do-post`}>Continuar lendo...</Link>
+          <Link href={`article/post/nome-do-post`}>Continuar lendo...</Link>
         </div>
       </div>
     </div>
