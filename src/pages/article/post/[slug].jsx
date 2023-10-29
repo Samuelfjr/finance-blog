@@ -1,7 +1,8 @@
 import { roboto, sora } from "@/styles/fonts";
 import Image from "next/image";
-import Author from "../../components/ui/Author/Author";
-import styles from "../../styles/Post.module.scss";
+import Author from "../../../components/ui/Author/Author";
+// import styles from "../../styles/Post.module.scss";
+import styles from "../../../styles/Post.module.scss";
 
 const Post = () => {
   return (
