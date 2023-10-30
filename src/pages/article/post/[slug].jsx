@@ -10,7 +10,9 @@ const Post = () => {
       <div className={styles.heading}>
         <h1>Título do artigo</h1>
         <p>subtitulo do artigo</p>
-        <Author />
+        <div className={styles.containerAuthor}>
+          <Author />
+        </div>
       </div>
       <article className={styles.content}>
         <div className={styles.image}></div>
