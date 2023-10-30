@@ -299,11 +299,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className={styles.allArticles}>
-              <Link className={roboto.className} href="/article">
-                Ver todos os Artigos
-              </Link>
-            </div>
+          </div>
+          <div className={styles.allArticles}>
+            <Link className={roboto.className} href="/article">
+              Ver todos os Artigos
+            </Link>
           </div>
         </section>
 

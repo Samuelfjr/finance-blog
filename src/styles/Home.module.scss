@@ -125,7 +125,8 @@
     .cardsArticles {
       width: 100%;
       padding-top: $padding-top;
-      display: inline-flex;
+      display: flex;
+      flex-direction: column;
       align-items: flex-start;
       max-width: 1148px;
 
@@ -220,8 +221,11 @@
       }
       .allArticles {
         width: 100%;
-        @include flex-center;
-        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2.5rem;
+        // margin-top: 5rem;
 
         a {
           color: $color-primary-eight;
