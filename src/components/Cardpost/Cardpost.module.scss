@@ -26,22 +26,32 @@
       margin-bottom: 1rem;
     }
 
-    p {
-      margin-bottom: 2rem;
+    .description {
+      margin-bottom: 3.5rem;
     }
   }
 
   .footer {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    a {
-      text-decoration: none;
-      color: $color-primary;
+    .continue {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      align-self: stretch;
 
-      &:hover {
-        font-weight: 600;
+      a {
+        text-decoration: none;
+        color: $color-primary;
+
+        &:hover {
+          font-weight: 600;
+        }
       }
     }
   }

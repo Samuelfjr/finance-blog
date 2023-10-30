@@ -8,13 +8,15 @@ const Cardpost = () => {
       <div className={styles.image}></div>
       <div className={styles.content}>
         <h2>Título do post</h2>
-        <p>
+        <p className={styles.description}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quasi
           quas et at optio ea voluptates cumque.
         </p>
         <div className={styles.footer}>
           <Author />
-          <Link href={`article/post/nome-do-post`}>Continuar lendo...</Link>
+          <div className={styles.continue}>
+            <Link href={`article/post/nome-do-post`}>Continuar lendo...</Link>
+          </div>
         </div>
       </div>
     </div>
