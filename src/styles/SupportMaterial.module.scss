@@ -4,5 +4,23 @@
 .supportMaterial {
   width: 100%;
   margin: auto;
-  padding: $padding-top;
+  max-width: 1140px;
+  padding: 21rem 0 41rem 0;
+
+  header {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .containerSupportMaterial {
+    width: 100%;
+    margin-top: 6rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 23rem;
+  }
 }
