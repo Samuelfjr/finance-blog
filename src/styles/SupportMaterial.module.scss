@@ -1,0 +1,8 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.supportMaterial {
+  width: 100%;
+  margin: auto;
+  padding: $padding-top;
+}
