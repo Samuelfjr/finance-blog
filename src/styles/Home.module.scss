@@ -130,11 +130,23 @@
       align-items: flex-start;
       max-width: 1148px;
 
-      .cards {
+      @include device(notebook-large) {
         width: 100%;
+        max-width: 90px;
+        // grid-template-columns: repeat(2, 1fr);
+        // margin: auto;
+      }
+
+      .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 11px;
+
+        @include device(notebook-large) {
+          width: 40%;
+          // grid-template-columns: repeat(2, 1fr);
+          // margin: auto;
+        }
 
         .card {
           width: 100%;

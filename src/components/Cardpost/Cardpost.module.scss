@@ -6,8 +6,17 @@
   align-items: center;
   gap: 2rem;
 
+  @include device(tablet) {
+    flex-direction: column;
+    max-width: 50rem;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 4rem;
+
+    @include device(tablet) {
+      margin-bottom: 7.5rem;
+    }
   }
 
   &:hover {
@@ -15,9 +24,14 @@
   }
 
   .image {
-    width: 20rem;
+    max-width: 20rem;
     height: 20rem;
     border: 1px solid $color-primary;
+
+    @include device(tablet) {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .content {

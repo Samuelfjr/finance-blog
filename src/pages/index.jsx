@@ -121,6 +121,7 @@ export default function Home() {
 
             <div className={styles.card}>
               <Image
+                className={styles.img}
                 src="/man-writing.jpg"
                 width={367}
                 height={200}
