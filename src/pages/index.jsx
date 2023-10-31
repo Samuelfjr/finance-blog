@@ -1,11 +1,35 @@
+import Image from "next/image";
+import Link from "next/link";
+import { gql, useQuery } from "@apollo/client";
+
 import { sora, roboto } from "@/styles/fonts";
 import styles from "../styles/Home.module.scss";
 import CardMaterial from "../components/CardMaterial/CardMaterial";
 
-import Image from "next/image";
-import Link from "next/link";
-
 export default function Home() {
+  const GET_ALL_POSTS = gql`
+    query GetAllPosts {
+      posts {
+        id
+        slug
+        title
+        subtitle
+        createdAt
+        category
+        coverImage {
+          url
+        }
+        author {
+          name
+        }
+      }
+    }
+  `;
+
+  const { loading, data, error } = useQuery(GET_ALL_POSTS);
+
+  console.log(data?.posts && data.posts);
+
   return (
     <main className={styles.page}>
       <div className={styles.containerPage}>
