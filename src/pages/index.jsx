@@ -336,12 +336,14 @@ export default function Home() {
               Blog: O seu guia completo para dominar as finanças.
             </h1>
             <div className={styles.imageSubtitle}>
-              <Image
-                src="/pen-paper-ebook.jpg"
-                alt="ebook, caneta e caderno"
-                width={565}
-                height={367}
-              />
+              <div className={styles.img}>
+                <Image
+                  src="/pen-paper-ebook.jpg"
+                  alt="ebook, caneta e caderno"
+                  width={565}
+                  height={367}
+                />
+              </div>
               <div className={styles.subtitleDescription}>
                 <h3 className={sora.className}>
                   Sua vida financeira nas suas mãos

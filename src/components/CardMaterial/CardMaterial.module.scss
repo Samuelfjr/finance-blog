@@ -3,6 +3,9 @@
 
 .cardMaterial {
   margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
   .card {
     position: relative;
@@ -10,6 +13,17 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 367px;
+    width: 100%;
+
+    @include device(notebook) {
+      width: 95%;
+    }
+
+    .img {
+      @include device(notebook-large) {
+        width: 100%;
+      }
+    }
 
     .partCard {
       position: absolute;

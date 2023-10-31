@@ -7,7 +7,13 @@ const CardMaterial = () => {
   return (
     <article className={styles.cardMaterial}>
       <div className={styles.card}>
-        <Image src="/ebook.jpg" width={367} height={200} alt="ebook" />
+        <Image
+          className={styles.img}
+          src="/ebook.jpg"
+          width={367}
+          height={200}
+          alt="ebook"
+        />
 
         <div className={styles.partCard}>
           <h3 className={sora.className}>Ebook Bolsa de Valores</h3>

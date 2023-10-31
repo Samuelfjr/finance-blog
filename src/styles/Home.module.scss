@@ -10,6 +10,10 @@
     margin: auto;
     padding: $padding-top 0 $padding-top 0;
 
+    @include device(notebook-large) {
+      width: 90%;
+    }
+
     .supportMaterial {
       display: inline-flex;
       flex-direction: column;
@@ -31,18 +35,18 @@
 
       .backingCardContainer {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 7rem;
+
+        @include device(tablet) {
+          grid-template-columns: repeat(1, 1fr);
+          row-gap: 24rem;
+        }
       }
 
       .allSupportMaterials {
-        // width: 100%;
-        // @include flex-center;
-        // align-self: stretch;
-        // padding-top: 4rem;
-
         @include flex-center;
-        padding: 170px 10px 0px 10px;
+        padding: 20rem 1rem 0px 1rem;
         align-self: stretch;
 
         a {
@@ -128,25 +132,22 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      max-width: 1148px;
+      max-width: 1140px;
 
-      @include device(notebook-large) {
-        width: 100%;
-        max-width: 90px;
-        // grid-template-columns: repeat(2, 1fr);
-        // margin: auto;
-      }
+      // @include device(notebook-large) {
+      //   // grid-template-columns: repeat(2, 1fr);
+      //   // margin: auto;
+      // }
 
       .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 11px;
 
-        @include device(notebook-large) {
-          width: 40%;
-          // grid-template-columns: repeat(2, 1fr);
-          // margin: auto;
-        }
+        // @include device(notebook-large) {
+        //   // grid-template-columns: repeat(2, 1fr);
+        //   // margin: auto;
+        // }
 
         .card {
           width: 100%;
@@ -158,6 +159,18 @@
           align-items: flex-start;
           margin-bottom: 30rem;
 
+          // .img {
+          //   background-color: black;
+          //   width: 97%;
+          // }
+
+          // @include device(notebook-large) {
+          //   // grid-template-columns: repeat(2, 1fr);
+          //   // margin: auto;
+          //   background-color: aqua;
+          //   width: 95%;
+          // }
+
           .partCard {
             width: 100%;
             position: absolute;
@@ -168,6 +181,13 @@
             background-color: $color-primary;
             top: 17rem;
             z-index: 10;
+
+            // @include device(notebook-large) {
+            //   // grid-template-columns: repeat(2, 1fr);
+            //   // margin: auto;
+            //   background-color: red;
+            //   width: 95%;
+            // }
 
             .containerCategory {
               width: 43%;
@@ -306,6 +326,18 @@
         display: flex;
         padding-top: 30px;
         gap: 20px;
+
+        @include device(notebook) {
+          flex-direction: column;
+        }
+
+        .img {
+          width: 100%;
+
+          @include device(notebook) {
+            @include flex-center;
+          }
+        }
 
         .subtitleDescription {
           display: flex;
