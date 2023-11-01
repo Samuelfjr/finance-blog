@@ -16,6 +16,7 @@ export default function Home() {
         subtitle
         createdAt
         category
+        featuredPost
         coverImage {
           url
         }
@@ -26,9 +27,26 @@ export default function Home() {
     }
   `;
 
-  const { loading, data, error } = useQuery(GET_ALL_POSTS);
+  interface AllPosts {
+    posts: {
+      id: string;
+      slug: string;
+      title: string;
+      subtitle: string;
+      createdAt: string;
+      category: string;
+      featuredPost: boolean;
+      coverImage: {
+        url: string;
+      };
+      author: {
+        name: string;
+      };
+    }[];
+  }
 
-  console.log(data?.posts && data.posts);
+  const { loading, data, error } = useQuery<AllPosts>(GET_ALL_POSTS);
+  console.log(data?.posts);
 
   return (
     <main className={styles.page}>
