@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <article className={styles.articles}>
       <h1>articles</h1>
-      {data?.posts.map((post, index) => {
+      {/* {data?.posts.map((post, index) => {
         return (
           <CardPost
             key={post.id}
@@ -17,7 +17,7 @@ const Article = () => {
             urlImage={post.coverImage.url}
           />
         );
-      })}
+      })} */}
     </article>
   );
 };

@@ -5,6 +5,7 @@ import { gql, useQuery } from "@apollo/client";
 import { sora, roboto } from "@/styles/fonts";
 import styles from "../styles/Home.module.scss";
 import CardMaterial from "../components/CardMaterial/CardMaterial";
+import CardPost from "../components/CardPost/CardPost";
 
 export default function Home() {
   const GET_ALL_POSTS = gql`
@@ -128,7 +129,20 @@ export default function Home() {
 
         <section className={styles.cardsArticles}>
           <div className={styles.cards}>
-            <div className={styles.card}>
+            {data?.posts.map((post, index) => {
+              return (
+                <CardPost
+                  key={post.id}
+                  title={post.title}
+                  author={post.author.name}
+                  createdAt={post.createdAt}
+                  subtitle={post.subtitle}
+                  urlImage={post.coverImage.url}
+                />
+              );
+            })}
+
+            {/* <div className={styles.card}>
               <Image src="/dollar.jpg" width={367} height={200} alt="dólar" />
 
               <div className={styles.partCard}>
@@ -341,7 +355,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className={styles.allArticles}>
             <Link className={roboto.className} href="/article">

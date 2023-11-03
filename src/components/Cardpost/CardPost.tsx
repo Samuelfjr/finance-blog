@@ -27,7 +27,7 @@ export default function CardPost({
         <h2>{title}</h2>
         <p className={styles.description}>{subtitle}</p>
         <div className={styles.footer}>
-          {/* <Author /> */}
+          <Author />
           <div className={styles.continue}>
             <Link href={`article/post/nome-do-post`}>Continuar lendo...</Link>
           </div>
