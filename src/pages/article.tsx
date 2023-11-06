@@ -44,10 +44,9 @@ export default function Article() {
 
   const { loading, data, error } = useQuery<AllPosts>(GET_ALL_POSTS);
   console.log(data?.posts);
+
   return (
     <article className={styles.articles}>
-      <h1>articles</h1>
-
       {data?.posts.map((post, index) => {
         return (
           <CardPost

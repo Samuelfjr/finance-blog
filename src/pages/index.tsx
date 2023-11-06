@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { gql, useQuery } from "@apollo/client";
+import router, { useRouter } from "next/router";
 
 import { sora, roboto } from "@/styles/fonts";
 import styles from "../styles/Home.module.scss";
@@ -8,6 +9,11 @@ import CardMaterial from "../components/CardMaterial/CardMaterial";
 import CardPostHome from "@/components/CardPostHome/CardPostHome";
 
 export default function Home() {
+  // const router = useRouter();
+  // //Filter Posts
+  // const searchFor = router.query.search || null;
+  // const foundPosts = posts.filter();
+
   const GET_ALL_POSTS = gql`
     query GetAllPosts {
       posts(orderBy: createdAt_DESC) {

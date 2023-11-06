@@ -16,19 +16,24 @@ const Hero = () => {
           <h4 className={sora.className}>Rubens Machado</h4>
         </div>
         <div className={styles.containerSearchBar}>
-          <input
-            className={styles.searchBar}
-            id="search-bar"
-            type="text"
-            name="searchbar"
-            placeholder="Buscar"
-          />
-          <Image
-            src="/search.svg"
-            alt="lupa de pesquisa"
-            width={18}
-            height={18}
-          />
+          <form action="/">
+            <label htmlFor="search">buscar</label>
+            <input
+              className={styles.searchBar}
+              id="search-bar"
+              type="text"
+              name="searchbar"
+              placeholder="Buscar artigos"
+            />
+            <button>
+              <Image
+                src="/search.svg"
+                alt="lupa de pesquisa"
+                width={18}
+                height={18}
+              />
+            </button>
+          </form>
         </div>
       </div>
     </section>
