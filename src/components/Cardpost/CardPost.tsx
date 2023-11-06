@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { roboto } from "@/styles/fonts";
 
+import { format } from "date-fns";
+
 interface CardPostProps {
   title: string;
   subtitle: string;
@@ -36,7 +38,10 @@ export default function CardPost({
           <div className={styles.author}>
             <div className={styles.content}>
               <p className={styles.name}>{author}</p>
-              <p className={styles.date}>{createdAt}</p>
+              <p className={styles.date}>
+                {" "}
+                {format(new Date(createdAt), "dd/MM/yyyy")}
+              </p>
             </div>
           </div>
           <div className={styles.continue}>

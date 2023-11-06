@@ -1,8 +1,9 @@
 import styles from "./CardPostHome.module.scss";
-import Author from "../ui/Author/Author";
 import { roboto, sora } from "@/styles/fonts";
 import Link from "next/link";
 import Image from "next/image";
+
+import { format } from "date-fns";
 
 interface CardPostHomeProps {
   title: string;
@@ -39,7 +40,9 @@ export default function CardPostHome({
           <h3 className={sora.className}>{title}</h3>
 
           <div className={styles.containerDate}>
-            <h4 className={roboto.className}>{createdAt}</h4>
+            <h4 className={roboto.className}>
+              {format(new Date(createdAt), "dd/MM/yyyy")}
+            </h4>
           </div>
 
           <p className={roboto.className}>{subtitle}</p>
