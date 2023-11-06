@@ -11,8 +11,12 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 
-  @include device(notebook) {
+  @include device(notebook-large) {
     font-size: 60%;
+  }
+
+  @include device(notebook) {
+    font-size: 55%;
   }
 
   @include device(mobile) {

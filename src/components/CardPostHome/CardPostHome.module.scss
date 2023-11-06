@@ -68,10 +68,14 @@
       background: $color-primary-eight;
 
       h4 {
-        font-size: 12px;
+        font-size: 1.2rem;
         font-weight: 700;
         color: $color-primary;
         line-height: 125%;
+
+        @include device(notebook-large) {
+          //   font-size: 1rem;
+        }
       }
     }
 
@@ -79,7 +83,7 @@
       padding-top: 8px;
       align-self: stretch;
       color: $base-primary-color;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 600;
     }
 
@@ -88,7 +92,7 @@
 
       h4 {
         color: $tertiary-text-color;
-        font-size: 12px;
+        font-size: 1.2rem;
         font-weight: 600;
       }
     }
@@ -96,7 +100,7 @@
     p {
       width: 100%;
       color: $quarternary-text-color;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 400;
     }
 
@@ -110,7 +114,7 @@
       a {
         text-decoration: none;
         color: $color-primary-eight;
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: 400;
 
         .arrow {
