@@ -7,6 +7,7 @@ import { sora, roboto } from "@/styles/fonts";
 import styles from "../styles/Home.module.scss";
 import CardMaterial from "../components/CardMaterial/CardMaterial";
 import CardPostHome from "@/components/CardPostHome/CardPostHome";
+import { Loading } from "@/components/ui/Loading/Loading";
 
 export default function Home() {
   // const router = useRouter();
@@ -53,7 +54,9 @@ export default function Home() {
   }
 
   const { loading, data, error } = useQuery<AllPosts>(GET_ALL_POSTS);
-  console.log(data?.posts);
+  console.log(loading);
+
+  if (loading) return <Loading />;
 
   return (
     <main className={styles.page}>
