@@ -144,19 +144,29 @@
         margin: auto;
       }
 
+      @include device(tablet) {
+        width: 55%;
+        margin: auto;
+      }
+
       .cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
         // grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 5.5rem;
+        row-gap: 2rem;
 
         @include device(notebook-large) {
-          row-gap: 8.5rem;
+          row-gap: 1.2rem;
           column-gap: 1rem;
         }
 
         @include device(notebook) {
           grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+        }
+
+        @include device(tablet) {
+          grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+          margin: auto;
         }
       }
 

@@ -24,9 +24,11 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 30rem;
+  max-height: 20rem;
+  background-color: aliceblue;
 
   .img {
-    width: 102.5%;
+    width: 102%;
   }
 
   // .img {
@@ -102,6 +104,10 @@
       color: $quarternary-text-color;
       font-size: 1.6rem;
       font-weight: 400;
+
+      @include device(notebook-large) {
+        font-size: 1.4rem;
+      }
     }
 
     .continue {
