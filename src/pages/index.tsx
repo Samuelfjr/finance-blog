@@ -10,7 +10,7 @@ import CardPost from "../components/CardPost/CardPost";
 export default function Home() {
   const GET_ALL_POSTS = gql`
     query GetAllPosts {
-      posts {
+      posts(orderBy: createdAt_DESC) {
         id
         slug
         title
