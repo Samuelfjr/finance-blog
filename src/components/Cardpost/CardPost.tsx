@@ -1,6 +1,7 @@
 import styles from "./CardPost.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { roboto } from "@/styles/fonts";
 
 interface CardPostProps {
   title: string;
@@ -19,11 +20,17 @@ export default function CardPost({
 }: CardPostProps) {
   return (
     <div className={styles.post}>
-      <div className={styles.image}>
-        <Image src={urlImage} alt="" width={367} height={200} />
+      <div className={styles.containerImage}>
+        <Image
+          className={styles.image}
+          src={urlImage}
+          alt=""
+          width={367}
+          height={200}
+        />
       </div>
       <div className={styles.content}>
-        <h2>{title}</h2>
+        <h2 className={roboto.className}>{title}</h2>
         <p className={styles.description}>{subtitle}</p>
         <div className={styles.footer}>
           <div className={styles.author}>
