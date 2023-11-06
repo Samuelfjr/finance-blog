@@ -1,0 +1,122 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+// .cards {
+//   //   display: grid;
+//   //   grid-template-columns: repeat(3, 1fr);
+//   //   grid-gap: 11px;
+
+//   //   grid-template-columns: repeat(auto-fill, minmax(auto 1fr));
+//   display: flex;
+//   background-color: aliceblue;
+
+//   // @include device(notebook-large) {
+//   //   // grid-template-columns: repeat(2, 1fr);
+//   //   // margin: auto;
+//   // }
+
+.card {
+  width: 100%;
+  max-width: 367px;
+  position: relative;
+  display: flex;
+  padding: 0px 4px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30rem;
+
+  .img {
+    width: 102.5%;
+  }
+
+  // .img {
+  //   background-color: black;
+  //   width: 97%;
+  // }
+
+  // @include device(notebook-large) {
+  //   // grid-template-columns: repeat(2, 1fr);
+  //   // margin: auto;
+  //   background-color: aqua;
+  //   width: 95%;
+  // }
+
+  .partCard {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    padding: 50px 33px;
+    flex-direction: column;
+    border-radius: 20px 20px 0px 0px;
+    background-color: $color-primary;
+    top: 17rem;
+    z-index: 10;
+
+    // @include device(notebook-large) {
+    //   // grid-template-columns: repeat(2, 1fr);
+    //   // margin: auto;
+    //   background-color: red;
+    //   width: 95%;
+    // }
+
+    .containerCategory {
+      width: 43%;
+      display: flex;
+      padding: 2px 6px 2px 4px;
+      align-items: flex-start;
+      border-radius: 4px;
+      background: $color-primary-eight;
+
+      h4 {
+        font-size: 12px;
+        font-weight: 700;
+        color: $color-primary;
+        line-height: 125%;
+      }
+    }
+
+    h3 {
+      padding-top: 8px;
+      align-self: stretch;
+      color: $base-primary-color;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .containerDate {
+      padding: 15px 0 25px 0;
+
+      h4 {
+        color: $tertiary-text-color;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      width: 100%;
+      color: $quarternary-text-color;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .continue {
+      width: 100%;
+      display: flex;
+      padding-top: 2rem;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: $color-primary-eight;
+        font-size: 14px;
+        font-weight: 400;
+
+        .arrow {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
