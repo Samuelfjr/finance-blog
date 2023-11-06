@@ -49,16 +49,16 @@ export default function Article() {
       <h1>articles</h1>
 
       {data?.posts.map((post, index) => {
-          return (
-            <CardPost
-              key={post.id}
-              title={post.title}
-              author={post.author.name}
-              createdAt={post.createdAt}
-              subtitle={post.subtitle}
-              urlImage={post.coverImage.url}
-            />
-          );
+        return (
+          <CardPost
+            key={post.id}
+            title={post.title}
+            author={post.author.name}
+            createdAt={post.createdAt}
+            subtitle={post.subtitle}
+            urlImage={post.coverImage.url}
+          />
+        );
       })}
     </article>
   );

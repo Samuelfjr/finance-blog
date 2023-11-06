@@ -1,5 +1,4 @@
 import styles from "./CardPost.module.scss";
-import Author from "../ui/Author/Author";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -27,7 +26,12 @@ export default function CardPost({
         <h2>{title}</h2>
         <p className={styles.description}>{subtitle}</p>
         <div className={styles.footer}>
-          <Author />
+          <div className={styles.author}>
+            <div className={styles.content}>
+              <p className={styles.name}>{author}</p>
+              <p className={styles.date}>{createdAt}</p>
+            </div>
+          </div>
           <div className={styles.continue}>
             <Link href={`article/post/nome-do-post`}>Continuar lendo...</Link>
           </div>
