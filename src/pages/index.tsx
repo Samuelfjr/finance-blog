@@ -8,55 +8,55 @@ import styles from "../styles/Home.module.scss";
 import CardMaterial from "../components/CardMaterial/CardMaterial";
 import CardPostHome from "@/components/CardPostHome/CardPostHome";
 import { Loading } from "@/components/ui/Loading/Loading";
+import { GetServerSideProps } from "next";
+import { client } from "@/lib/apollo";
 
-export default function Home() {
+const GET_ALL_POSTS = gql`
+  query GetAllPosts {
+    posts(orderBy: createdAt_DESC) {
+      id
+      slug
+      title
+      subtitle
+      createdAt
+      category
+      featuredPost
+      coverImage {
+        url
+      }
+      author {
+        name
+      }
+    }
+  }
+`;
+interface AllPosts {
+  posts: {
+    id: string;
+    slug: string;
+    title: string;
+    subtitle: string;
+    createdAt: string;
+    category: string;
+    featuredPost: boolean;
+    coverImage: {
+      url: string;
+    };
+    author: {
+      name: string;
+    };
+  }[];
+}
+export default function Home({ posts }: AllPosts) {
   // const router = useRouter();
   // //Filter Posts
   // const searchFor = router.query.search || null;
   // const foundPosts = posts.filter();
 
-  const GET_ALL_POSTS = gql`
-    query GetAllPosts {
-      posts(orderBy: createdAt_DESC) {
-        id
-        slug
-        title
-        subtitle
-        createdAt
-        category
-        featuredPost
-        coverImage {
-          url
-        }
-        author {
-          name
-        }
-      }
-    }
-  `;
+  // const { loading, data, error } = useQuery<AllPosts>(GET_ALL_POSTS);
+  // console.log(loading);
 
-  interface AllPosts {
-    posts: {
-      id: string;
-      slug: string;
-      title: string;
-      subtitle: string;
-      createdAt: string;
-      category: string;
-      featuredPost: boolean;
-      coverImage: {
-        url: string;
-      };
-      author: {
-        name: string;
-      };
-    }[];
-  }
-
-  const { loading, data, error } = useQuery<AllPosts>(GET_ALL_POSTS);
-  console.log(loading);
-
-  if (loading) return <Loading />;
+  // if (loading) return <Loading />;
 
   return (
     <main className={styles.page}>
@@ -138,7 +138,7 @@ export default function Home() {
 
         <section className={styles.cardsArticles}>
           <div className={styles.cards}>
-            {data?.posts.map((post, index) => {
+            {posts.map((post, index) => {
               if (index <= 5) {
                 return (
                   <CardPostHome
@@ -222,3 +222,12 @@ export default function Home() {
     </main>
   );
 }
+
+export const getServerSideProp: GetServerSideProps = async (ctx) => {
+  const { data } = await client.query({ query: GET_ALL_POSTS });
+  return {
+    props: {
+      posts: data.posts,
+    },
+  };
+};
