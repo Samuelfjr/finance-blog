@@ -47,7 +47,7 @@ CardPostProps) {
             </div>
           </div>
           <div className={styles.continue}>
-            <Link href={`article/post/nome-do-post`}>Continuar lendo...</Link>
+            <Link href={`article/post/[slug]`}>Continuar lendo...</Link>
           </div>
         </div>
       </div>
