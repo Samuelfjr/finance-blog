@@ -1,7 +1,7 @@
 import styles from "./CardPost.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { roboto } from "@/styles/fonts";
+import { roboto, sora } from "@/styles/fonts";
 
 import { format } from "date-fns";
 
@@ -11,6 +11,7 @@ interface CardPostProps {
   author: string;
   createdAt: string;
   urlImage: string;
+  category: string;
 }
 
 export default function CardPost({
@@ -19,6 +20,7 @@ export default function CardPost({
   subtitle,
   title,
   urlImage,
+  category,
 }: CardPostProps) {
   return (
     <div className={styles.post}>
@@ -32,14 +34,14 @@ export default function CardPost({
         />
       </div>
       <div className={styles.content}>
-        <h2 className={roboto.className}>{title}</h2>
+        <h4 className={styles.category}>{category}</h4>
+        <h2 className={sora.className}>{title}</h2>
         <p className={styles.description}>{subtitle}</p>
         <div className={styles.footer}>
           <div className={styles.author}>
             <div className={styles.content}>
               <p className={styles.name}>{author}</p>
               <p className={styles.date}>
-                {" "}
                 {format(new Date(createdAt), "dd/MM/yyyy")}
               </p>
             </div>

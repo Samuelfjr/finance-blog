@@ -34,9 +34,9 @@ export default function CardPostHome({
         />
 
         <div className={styles.partCard}>
-          <div className={styles.containerCategory}>
-            <h4>{category}</h4>
-          </div>
+          {/* <div className={styles.containerCategory}> */}
+          <h4 className={styles.category}>{category}</h4>
+          {/* </div> */}
           <h3 className={sora.className}>{title}</h3>
 
           <div className={styles.containerDate}>

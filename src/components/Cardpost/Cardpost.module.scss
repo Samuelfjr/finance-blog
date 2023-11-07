@@ -41,6 +41,7 @@
     .image {
       width: 100%;
       min-width: 30rem;
+      border-radius: 1rem;
 
       @include device(notebook-large) {
         min-width: 28rem;
@@ -51,9 +52,25 @@
   .content {
     width: 100%;
 
+    .category {
+      width: 40%;
+      display: flex;
+      padding: 2px 6px 2px 4px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.4rem;
+      background: $color-primary-eight;
+
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $color-primary;
+      line-height: 125%;
+    }
+
     h2 {
       font-weight: 400;
       margin-bottom: 1rem;
+      color: $color-primary-three;
     }
 
     .description {
@@ -72,6 +89,7 @@
       align-items: center;
       gap: 1rem;
       width: 100%;
+      color: $color-primary;
 
       .image {
         width: 3.5rem;
@@ -97,6 +115,7 @@
 
         .date {
           font-size: 1.2rem;
+          font-weight: 700;
           color: $tertiary-text-color;
         }
       }
