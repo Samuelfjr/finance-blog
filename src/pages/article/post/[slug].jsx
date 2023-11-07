@@ -3,6 +3,44 @@ import Image from "next/image";
 // import styles from "../../styles/Post.module.scss";
 import styles from "../../../styles/Post.module.scss";
 
+import { gql } from "@apollo/client";
+
+const GET_POST = gql`
+  query GetPost($slugPost: String) {
+    post(where: { slug: $slugPost }) {
+      id
+      title
+      content {
+        json
+      }
+      author {
+        name
+      }
+      createdAt
+      coverImage {
+        url
+      }
+    }
+  }
+`;
+
+interface PostProps {
+  post: {
+    id: String,
+    title: string,
+    coverImage: {
+      url: string,
+    }
+    author: {
+      name: string,
+    }
+    createdAt: string,
+    content: {
+      json: []
+    }
+  }
+}
+
 const Post = () => {
   return (
     <section className={styles.post}>
