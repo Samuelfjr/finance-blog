@@ -48,7 +48,7 @@ interface AllPosts {
   }[];
 }
 export default function Home({ posts }: AllPosts) {
-  // const router = useRouter();
+  // const router = useRouter();s
   // //Filter Posts
   // const searchFor = router.query.search || null;
   // const foundPosts = posts.filter();
@@ -80,7 +80,6 @@ export default function Home({ posts }: AllPosts) {
             </Link>
           </div>
         </section>
-
         <section className={styles.section}>
           <div className={styles.image}>
             <Image
@@ -160,7 +159,6 @@ export default function Home({ posts }: AllPosts) {
             </Link>
           </div>
         </section>
-
         <section className={styles.about}>
           <div className={styles.containerAbout}>
             <div>
@@ -182,7 +180,6 @@ export default function Home({ posts }: AllPosts) {
             </div>
           </div>
         </section>
-
         <section className={styles.blog}>
           <div className={styles.containerBlog}>
             <h1 className={sora.className}>
@@ -223,7 +220,7 @@ export default function Home({ posts }: AllPosts) {
   );
 }
 
-export const getServerSideProp: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { data } = await client.query({ query: GET_ALL_POSTS });
   return {
     props: {
