@@ -7,11 +7,14 @@ import { gql } from "@apollo/client";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { client } from "@/lib/apollo";
 
+import { format } from "date-fns";
+
 const GET_POST = gql`
   query GetPost($slugPost: String) {
     post(where: { slug: $slugPost }) {
       id
       title
+      subtitle
       content {
         json
       }
@@ -30,6 +33,7 @@ interface PostProps {
   post: {
     id: string;
     title: string;
+    subtitle: string;
     coverImage: {
       url: string;
     };
@@ -43,16 +47,27 @@ interface PostProps {
   };
 }
 
-export default function Post() {
+export default function Post({ post }: PostProps) {
   return (
     <section className={styles.post}>
       <div className={styles.heading}>
-        <h1>Título do artigo</h1>
-        <p>subtitulo do artigo</p>
-        <div className={styles.containerAuthor}>{/* <Author /> */}</div>
+        <h1>{post.title}</h1>
+        {/* <p>post.subtitle</p> */}
+        <div className={styles.containerAuthor}>
+          <div className={styles.author}>
+            <div className={styles.content}>
+              <p className={styles.name}>{post.author.name}</p>
+              <p className={styles.date}>
+                {format(new Date(post.createdAt), "dd/MM/yyyy")}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <article className={styles.content}>
-        <div className={styles.image}></div>
+        <div className={styles.image}>
+          <Image src={post.coverImage.url} alt="" width={367} height={200} />
+        </div>
         conteúdo do artigo
       </article>
     </section>
@@ -69,10 +84,10 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     },
   });
 
-console.log(data)
-
   return {
-    props: {},
+    props: {
+      post: data.post,
+    },
   };
 };
 
