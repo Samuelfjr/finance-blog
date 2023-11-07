@@ -52,7 +52,7 @@ export default function Post({ post }: PostProps) {
     <section className={styles.post}>
       <div className={styles.heading}>
         <h1>{post.title}</h1>
-        {/* <p>post.subtitle</p> */}
+        <p>{post.subtitle}</p>
         <div className={styles.containerAuthor}>
           <div className={styles.author}>
             <div className={styles.content}>
@@ -93,7 +93,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [],
-    fallback: true,
+    paths: [{ params: { slug: "titulo-de-exemplo-10" } }],
+    fallback: "blocking",
   };
 };
