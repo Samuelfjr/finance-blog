@@ -4,6 +4,9 @@ import Image from "next/image";
 import styles from "../../../styles/Post.module.scss";
 
 import { gql } from "@apollo/client";
+import { GetStaticProps } from 'next';
+import { client } from "@/lib/apollo";
+
 
 const GET_POST = gql`
   query GetPost($slugPost: String) {
@@ -26,7 +29,7 @@ const GET_POST = gql`
 
 interface PostProps {
   post: {
-    id: String,
+    id: string,
     title: string,
     coverImage: {
       url: string,
@@ -41,7 +44,7 @@ interface PostProps {
   }
 }
 
-const Post = () => {
+export default function Post() {
   return (
     <section className={styles.post}>
       <div className={styles.heading}>
@@ -57,4 +60,19 @@ const Post = () => {
   );
 };
 
-export default Post;
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const slug = ctx.params
+
+  console.log(slug)
+  
+  const { data} = await client.query({
+    query: GET_POST,
+    variables: {
+      // slugPost: 
+    }
+  })
+  return {
+    props: {}
+  }
+}
