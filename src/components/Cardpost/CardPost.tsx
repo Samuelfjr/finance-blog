@@ -36,7 +36,9 @@ export default function CardPost({
         />
       </div>
       <div className={styles.content}>
-        <h4 className={styles.category}>{category}</h4>
+        <div className={styles.containerCategory}>
+          <h4 className={styles.category}>{category}</h4>
+        </div>
         <h2 className={sora.className}>{title}</h2>
         <p className={styles.description}>{subtitle}</p>
         <div className={styles.footer}>

@@ -26,12 +26,14 @@
     // align-items: flex-start;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 23rem;
+    row-gap: 24.5rem;
     column-gap: 1rem;
 
     @include device(notebook) {
       grid-template-columns: repeat(2, 1fr);
       min-width: 835px;
+      row-gap: 24.5rem;
+      column-gap: 0rem;
     }
   }
 }

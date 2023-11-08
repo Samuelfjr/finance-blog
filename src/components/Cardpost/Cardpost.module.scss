@@ -52,19 +52,23 @@
   .content {
     width: 100%;
 
-    .category {
-      width: 40%;
-      display: flex;
-      padding: 2px 6px 2px 4px;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.4rem;
-      background: $color-primary-eight;
+    .containerCategory {
+      width: 20%;
 
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: $color-primary;
-      line-height: 125%;
+      .category {
+        width: 100%;
+        display: flex;
+        padding: 2px 6px 2px 4px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.4rem;
+        background: $color-primary-eight;
+
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $color-primary;
+        line-height: 125%;
+      }
     }
 
     h2 {
