@@ -1,13 +1,13 @@
-import { Roboto, Sora } from 'next/font/google'
+import { Roboto, Sora } from "next/font/google";
 
 const roboto = Roboto({
-  weight: ['500'],
-  subsets: ['latin'],
-})
+  weight: ["400", "500"],
+  subsets: ["latin"],
+});
 
 const sora = Sora({
-  weight: ['600', '700'],
-  subsets: ['latin'],
-})
+  weight: ["600", "700"],
+  subsets: ["latin"],
+});
 
-export { roboto ,sora }
+export { roboto, sora };

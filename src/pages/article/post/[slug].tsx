@@ -8,6 +8,8 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { client } from "@/lib/apollo";
 
 import { format } from "date-fns";
+import { RichText } from "@graphcms/rich-text-react-renderer";
+import { ElementNode } from "@graphcms/rich-text-types";
 
 const GET_POST = gql`
   query GetPost($slugPost: String) {
@@ -42,20 +44,22 @@ interface PostProps {
     };
     createdAt: string;
     content: {
-      json: [];
+      json: ElementNode[];
     };
   };
 }
 
 export default function Post({ post }: PostProps) {
+  console.log(post);
+
   return (
     <section className={styles.post}>
       <div className={styles.heading}>
-        <h1>{post.title}</h1>
-        <p>{post.subtitle}</p>
+        <h1 className={sora.className}>{post.title}</h1>
+        <h4 className={roboto.className}>{post.subtitle}</h4>
         <div className={styles.containerAuthor}>
           <div className={styles.author}>
-            <div className={styles.content}>
+            <div className={styles.contentAuthor}>
               <p className={styles.name}>{post.author.name}</p>
               <p className={styles.date}>
                 {format(new Date(post.createdAt), "dd/MM/yyyy")}
@@ -65,10 +69,25 @@ export default function Post({ post }: PostProps) {
         </div>
       </div>
       <article className={styles.content}>
-        <div className={styles.image}>
-          <Image src={post.coverImage.url} alt="" width={367} height={200} />
+        <div className={styles.containerImage}>
+          <Image
+            className={styles.img}
+            src={post.coverImage.url}
+            alt=""
+            width={367}
+            height={200}
+          />
         </div>
-        conteúdo do artigo
+        <div className={styles.containerText}>
+          <RichText
+            content={post.content.json}
+            renderers={{
+              p: ({ children }) => (
+                <p className={roboto.className}>{children}</p>
+              ),
+            }}
+          />
+        </div>
       </article>
     </section>
   );
@@ -88,7 +107,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     props: {
       post: data.post,
     },
-    revalidate: 60 * 30 //30 min
+    revalidate: 60 * 30, //30 min
   };
 };
 

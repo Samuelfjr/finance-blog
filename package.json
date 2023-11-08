@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.6",
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "date-fns": "^2.30.0",
     "graphql": "^16.8.1",
     "next": "13.5.4",
