@@ -7,13 +7,15 @@ const CardMaterial = () => {
   return (
     <article className={styles.cardMaterial}>
       <div className={styles.card}>
-        <Image
-          className={styles.img}
-          src="/ebook.jpg"
-          width={367}
-          height={200}
-          alt="ebook"
-        />
+        <div className={styles.containerImage}>
+          <Image
+            className={styles.img}
+            src="/ebook.jpg"
+            width={367}
+            height={200}
+            alt="ebook"
+          />
+        </div>
 
         <div className={styles.partCard}>
           <h3 className={sora.className}>Ebook Bolsa de Valores</h3>
@@ -25,7 +27,7 @@ const CardMaterial = () => {
 
           <div className={styles.buttonContent}>
             <Link className={roboto.className} href="/">
-              Acessar Conteúdo
+              Baixar Conteúdo
             </Link>
           </div>
         </div>

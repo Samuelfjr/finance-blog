@@ -57,6 +57,7 @@ export default function Article({ posts }: AllPosts) {
             createdAt={post.createdAt}
             subtitle={post.subtitle}
             urlImage={post.coverImage.url}
+            category={post.category}
             slug={post.slug}
           />
         );

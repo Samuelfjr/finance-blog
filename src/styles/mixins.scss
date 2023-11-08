@@ -4,6 +4,53 @@
   align-items: center;
 }
 
+@mixin styles-button {
+  border: 1px solid $color-primary-eight;
+  font-weight: 500;
+  position: relative;
+  outline: none;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: $color-primary;
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.3);
+
+  padding: 1rem 2rem;
+  opacity: 1;
+
+  &:hover {
+    // color: $color-primary-eight;
+    // background-color: $color-primary;
+    color: $color-primary;
+    background-color: $color-primary-eight;
+    transition: 0.3s;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.3);
+  }
+}
+
+@mixin styles-card-hover {
+  .containerImage {
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.5);
+    transition: 0.3s;
+
+    .img {
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  .partCard {
+    h3 {
+      transition: 0.3s;
+      color: $color-primary-eight;
+      text-decoration: underline;
+    }
+  }
+}
+
 @mixin device($device) {
   @if $device == desktop {
     @media only screen and (max-width: 1440px) {

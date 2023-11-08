@@ -26,8 +26,20 @@
   margin-bottom: 30rem;
   max-height: 20rem;
 
-  .img {
+  &:hover {
+    @include styles-card-hover;
+  }
+
+  .containerImage {
     width: 102%;
+    overflow: hidden;
+
+    .img {
+      width: 100%;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+    }
   }
 
   // .img {
@@ -73,6 +85,12 @@
       font-weight: 700;
       color: $color-primary;
       line-height: 125%;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-primary-eight;
+        transition: 0.3s;
+      }
     }
 
     h3 {
@@ -81,6 +99,10 @@
       color: $base-primary-color;
       font-size: 2rem;
       font-weight: 600;
+
+      // &:hover {
+      //   text-decoration: underline;
+      // }
     }
 
     .containerDate {

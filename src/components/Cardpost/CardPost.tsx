@@ -11,7 +11,7 @@ interface CardPostProps {
   author: string;
   createdAt: string;
   urlImage: string;
-  // category: string;
+  category: string;
   slug: string;
 }
 
@@ -22,8 +22,8 @@ export default function CardPost({
   title,
   urlImage,
   slug,
-}: // category,
-CardPostProps) {
+  category,
+}: CardPostProps) {
   return (
     <div className={styles.post}>
       <div className={styles.containerImage}>
@@ -36,7 +36,7 @@ CardPostProps) {
         />
       </div>
       <div className={styles.content}>
-        {/* <h4 className={styles.category}>{category}</h4> */}
+        <h4 className={styles.category}>{category}</h4>
         <h2 className={sora.className}>{title}</h2>
         <p className={styles.description}>{subtitle}</p>
         <div className={styles.footer}>

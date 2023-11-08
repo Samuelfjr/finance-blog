@@ -50,6 +50,7 @@
         align-self: stretch;
 
         a {
+          @include styles-button;
           color: $color-primary-eight;
           font-size: 1.6rem;
           font-weight: 400;
@@ -176,9 +177,10 @@
         flex-direction: column;
         align-items: center;
         margin-top: 2.5rem;
-        // margin-top: 5rem;
+        margin-top: 5rem;
 
         a {
+          @include styles-button;
           color: $color-primary-eight;
           font-size: 1.6rem;
           font-weight: 400;

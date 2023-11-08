@@ -19,9 +19,19 @@
       width: 95%;
     }
 
-    .img {
-      @include device(notebook-large) {
-        width: 100%;
+    &:hover {
+      @include styles-card-hover;
+    }
+    .containerImage {
+      overflow: hidden;
+      .img {
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+
+        @include device(notebook-large) {
+          width: 100%;
+        }
       }
     }
 
@@ -57,9 +67,9 @@
         padding: 8px 16px;
 
         border-radius: 10px;
-        border: 1px solid $color-primary-eight;
 
         a {
+          @include styles-button;
           font-size: 1.8rem;
           font-weight: 500;
           color: $color-primary-eight;
