@@ -29,10 +29,21 @@
     row-gap: 24.5rem;
     column-gap: 1rem;
 
+    @include device(notebook-large) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 23.5rem;
+      column-gap: 1rem;
+    }
+
     @include device(notebook) {
       grid-template-columns: repeat(2, 1fr);
-      min-width: 835px;
-      row-gap: 24.5rem;
+      row-gap: 23.5rem;
+      column-gap: 0rem;
+    }
+
+    @include device(tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 23.5rem;
       column-gap: 0rem;
     }
   }
