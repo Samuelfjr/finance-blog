@@ -12,6 +12,7 @@ interface CardPostProps {
   createdAt: string;
   urlImage: string;
   // category: string;
+  slug: string;
 }
 
 export default function CardPost({
@@ -20,6 +21,7 @@ export default function CardPost({
   subtitle,
   title,
   urlImage,
+  slug,
 }: // category,
 CardPostProps) {
   return (
@@ -47,7 +49,7 @@ CardPostProps) {
             </div>
           </div>
           <div className={styles.continue}>
-            <Link href={`article/post/[slug]`}>Continuar lendo...</Link>
+            <Link href={`/article/post/${slug}`}>Continuar lendo...</Link>
           </div>
         </div>
       </div>

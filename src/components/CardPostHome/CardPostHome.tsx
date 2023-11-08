@@ -7,6 +7,7 @@ import { format } from "date-fns";
 
 interface CardPostHomeProps {
   title: string;
+  slug: string;
   subtitle: string;
   author: string;
   createdAt: string;
@@ -16,6 +17,7 @@ interface CardPostHomeProps {
 
 export default function CardPostHome({
   author,
+  slug,
   createdAt,
   subtitle,
   title,
@@ -48,7 +50,7 @@ export default function CardPostHome({
           <p className={roboto.className}>{subtitle}</p>
 
           <div className={styles.continue}>
-            <Link className={roboto.className} href="/">
+            <Link className={roboto.className} href={`/article/post/${slug}`}>
               Continuar lendo
               <Image
                 className={styles.arrow}

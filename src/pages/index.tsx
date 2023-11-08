@@ -148,6 +148,7 @@ export default function Home({ posts }: AllPosts) {
                     subtitle={post.subtitle}
                     urlImage={post.coverImage.url}
                     category={post.category}
+                    slug={post.slug}
                   />
                 );
               }
