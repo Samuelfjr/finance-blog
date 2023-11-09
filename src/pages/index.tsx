@@ -111,15 +111,17 @@ export default function Home({ posts }: AllPosts) {
 
           <div className={styles.backingCardContainer}>
             {data?.supportMaterials.map((supportMaterial, index) => {
-              return (
-                <CardMaterial
-                  key={supportMaterial.id}
-                  title={supportMaterial.title}
-                  subtitle={supportMaterial.subtitle}
-                  image={supportMaterial.image.url}
-                  context={supportMaterial.content.url}
-                />
-              );
+              if (index <= 1) {
+                return (
+                  <CardMaterial
+                    key={supportMaterial.id}
+                    title={supportMaterial.title}
+                    subtitle={supportMaterial.subtitle}
+                    image={supportMaterial.image.url}
+                    context={supportMaterial.content.url}
+                  />
+                );
+              }
             })}
           </div>
 
