@@ -18,7 +18,7 @@
       display: inline-flex;
       flex-direction: column;
       align-items: center;
-      gap: 7rem;
+      gap: 8rem;
 
       .title {
         width: 100%;
@@ -40,7 +40,7 @@
 
         @include device(tablet) {
           grid-template-columns: repeat(1, 1fr);
-          row-gap: 24rem;
+          row-gap: 26rem;
         }
       }
 
@@ -48,6 +48,8 @@
         @include flex-center;
         padding: 20rem 1rem 0px 1rem;
         align-self: stretch;
+        margin: 0 auto;
+        width: 100%;
 
         a {
           @include styles-button;

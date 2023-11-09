@@ -11,6 +11,41 @@ import { Loading } from "@/components/ui/Loading/Loading";
 import { GetServerSideProps } from "next";
 import { client } from "@/lib/apollo";
 
+const GET_ALL_SUPPORT_MATERIAL = gql`
+  query GetSupportMaterial {
+    supportMaterials {
+      id
+      title
+      subtitle
+      image {
+        url
+      }
+      content {
+        url
+      }
+    }
+  }
+`;
+
+interface AllSupportMaterial {
+  supportMaterials: {
+    id: string;
+    title: string;
+    subtitle: string;
+    image: {
+      url: string;
+    };
+    content: {
+      url: string;
+    };
+  }[];
+}
+
+// const { loading, data, error } = useQuery<AllSupportMaterial>(
+//   GET_ALL_SUPPORT_MATERIAL
+// );
+// console.log(data?.supportMaterials);
+
 const GET_ALL_POSTS = gql`
   query GetAllPosts {
     posts(orderBy: createdAt_DESC) {
@@ -48,15 +83,18 @@ interface AllPosts {
   }[];
 }
 export default function Home({ posts }: AllPosts) {
+  // { supportMaterials }: AllSupportMaterial
   // const router = useRouter();s
   // //Filter Posts
   // const searchFor = router.query.search || null;
   // const foundPosts = posts.filter();
 
-  // const { loading, data, error } = useQuery<AllPosts>(GET_ALL_POSTS);
-  // console.log(loading);
+  const { loading, data, error } = useQuery<AllSupportMaterial>(
+    GET_ALL_SUPPORT_MATERIAL
+  );
+  console.log(loading);
 
-  // if (loading) return <Loading />;
+  if (loading) return <Loading />;
 
   return (
     <main className={styles.page}>
@@ -70,8 +108,17 @@ export default function Home({ posts }: AllPosts) {
           </div>
 
           <div className={styles.backingCardContainer}>
-            <CardMaterial />
-            <CardMaterial />
+            {data?.supportMaterials.map((supportMaterial, index) => {
+              return (
+                <CardMaterial
+                  key={supportMaterial.id}
+                  title={supportMaterial.title}
+                  subtitle={supportMaterial.subtitle}
+                  image={supportMaterial.image.url}
+                  context={supportMaterial.content.url}
+                />
+              );
+            })}
           </div>
 
           <div className={styles.allSupportMaterials}>
@@ -222,10 +269,14 @@ export default function Home({ posts }: AllPosts) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { data } = await client.query({ query: GET_ALL_POSTS });
+  const { data } = await client.query({
+    query: GET_ALL_POSTS,
+  });
+
   return {
     props: {
       posts: data.posts,
+      // supportMaterials: data.supportMaterials,
     },
   };
 };

@@ -3,30 +3,39 @@ import { sora, roboto } from "@/styles/fonts";
 import Link from "next/link";
 import Image from "next/image";
 
-const CardMaterial = () => {
+import React, { useState } from "react";
+
+interface AllSupportMaterial {
+  title: string;
+  subtitle: string;
+  image: string;
+  context: string;
+}
+
+const CardMaterial = ({
+  title,
+  subtitle,
+  image,
+  context,
+}: AllSupportMaterial) => {
   return (
     <article className={styles.cardMaterial}>
       <div className={styles.card}>
         <div className={styles.containerImage}>
           <Image
             className={styles.img}
-            src="/ebook.jpg"
+            src={image}
             width={367}
             height={200}
-            alt="ebook"
+            alt=""
           />
         </div>
 
         <div className={styles.partCard}>
-          <h3 className={sora.className}>Ebook Bolsa de Valores</h3>
-
-          <p className={roboto.className}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut
-          </p>
-
+          <h3 className={sora.className}>{title}</h3>
+          <p className={roboto.className}>{subtitle}</p>
           <div className={styles.buttonContent}>
-            <Link className={roboto.className} href="/">
+            <Link className={roboto.className} href="{context}" download>
               Baixar Conteúdo
             </Link>
           </div>

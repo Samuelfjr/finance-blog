@@ -15,7 +15,7 @@ const Hero = () => {
           <h1 className={sora.className}>Desvendando o Mundo das Finanças</h1>
           <h4 className={sora.className}>Rubens Machado</h4>
         </div>
-        <div className={styles.containerSearchBar}>
+        {/* <div className={styles.containerSearchBar}>
           <form action="/">
             <label htmlFor="search">buscar</label>
             <input
@@ -34,7 +34,7 @@ const Hero = () => {
               />
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );
