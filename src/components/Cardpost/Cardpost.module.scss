@@ -8,6 +8,16 @@
   gap: 3.5rem;
   max-width: 1440px;
 
+  &:hover {
+    @include styles-card-hover;
+
+    h2 {
+      transition: 0.3s;
+      color: $color-primary-eight;
+      text-decoration: underline;
+    }
+  }
+
   @include device(tablet) {
     flex-direction: column;
     max-width: 50rem;
@@ -28,6 +38,7 @@
   .containerImage {
     width: 40%;
     height: 20rem;
+    overflow: hidden;
 
     @include device(notebook) {
       width: 80%;
@@ -38,10 +49,14 @@
       height: auto;
     }
 
-    .image {
+    .img {
       width: 100%;
       min-width: 30rem;
       border-radius: 1rem;
+
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
 
       @include device(notebook-large) {
         min-width: 28rem;
@@ -63,6 +78,11 @@
         justify-content: center;
         border-radius: 0.4rem;
         background: $color-primary-eight;
+
+        &:hover {
+          background: white;
+          transition: 0.3s;
+        }
 
         font-size: 1.2rem;
         font-weight: 700;
@@ -138,7 +158,11 @@
         color: $color-primary;
 
         &:hover {
-          font-weight: 600;
+          @include continue-reading;
+        }
+
+        .arrow {
+          margin-left: 1rem;
         }
       }
     }

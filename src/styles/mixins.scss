@@ -51,6 +51,13 @@
   }
 }
 
+@mixin continue-reading {
+  transition: all 0.3s;
+  // color: $color-primary-eight;
+  color: $color-primary;
+  text-decoration: underline;
+}
+
 @mixin device($device) {
   @if $device == desktop {
     @media only screen and (max-width: 1440px) {

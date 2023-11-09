@@ -28,30 +28,42 @@ export default function CardPost({
     <div className={styles.post}>
       <div className={styles.containerImage}>
         <Image
-          className={styles.image}
+          className={styles.img}
           src={urlImage}
           alt=""
           width={367}
           height={200}
         />
       </div>
+
       <div className={styles.content}>
         <div className={styles.containerCategory}>
           <h4 className={styles.category}>{category}</h4>
         </div>
-        <h2 className={sora.className}>{title}</h2>
-        <p className={styles.description}>{subtitle}</p>
-        <div className={styles.footer}>
-          <div className={styles.author}>
-            <div className={styles.content}>
-              <p className={styles.name}>{author}</p>
-              <p className={styles.date}>
-                {format(new Date(createdAt), "dd/MM/yyyy")}
-              </p>
+        <div className={styles.partCard}>
+          <h2 className={sora.className}>{title}</h2>
+          <p className={styles.description}>{subtitle}</p>
+          <div className={styles.footer}>
+            <div className={styles.author}>
+              <div className={styles.content}>
+                <p className={styles.name}>{author}</p>
+                <p className={styles.date}>
+                  {format(new Date(createdAt), "dd/MM/yyyy")}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className={styles.continue}>
-            <Link href={`/article/post/${slug}`}>Continuar lendo...</Link>
+            <div className={styles.continue}>
+              <Link href={`/article/post/${slug}`}>
+                Continuar lendo
+                <Image
+                  className={styles.arrow}
+                  src="/continue.svg"
+                  alt=""
+                  width={15}
+                  height={12}
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
