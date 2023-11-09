@@ -12,13 +12,15 @@ const Header = () => {
 
         <ul className={styles.navBar}>
           <li>
-            <Link href="/">Home</Link>
+            <Link id="home" href="/">
+              Home
+            </Link>
           </li>
           <li>
             <Link href="/support-material">Materiais de Apoio</Link>
           </li>
           <li>
-            <Link href="/">Contato</Link>
+            <Link href="#contact">Contato</Link>
           </li>
           <li>
             <Link className={styles.btn} href="/article">

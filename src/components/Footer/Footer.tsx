@@ -17,7 +17,7 @@ const Footer = () => {
         </p>
         <div className={styles.containerIcons}>
           <div className={styles.container}>
-            <Link href="/">
+            <Link id="contact" href="/">
               <Image
                 src="/whatsapp.svg"
                 alt="whatsapp"
@@ -34,7 +34,7 @@ const Footer = () => {
               />
             </Link>
             <div className={styles.containerBoxUp}>
-              <Link href="/">
+              <Link href="#home">
                 <div className={styles.boxUp}>
                   <Image src="/expand-less.svg" alt="" width={24} height={24} />
                 </div>
