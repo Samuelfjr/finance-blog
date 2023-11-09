@@ -61,77 +61,28 @@
       }
     }
 
-    .section {
-      display: flex;
+    .CardPostMostRecent {
       padding-top: $padding-top;
+      display: flex;
+      flex-direction: column;
 
-      .image {
-        width: 100%;
-        max-width: 576px;
-        padding: 17px 63px;
+      h1 {
+        color: $base-primary-color;
+        font-size: 4rem;
+        text-align: center;
+        font-weight: 700;
       }
 
-      .posts {
-        width: 100%;
-        max-width: 480px;
+      .containerCardPostMostRecent {
+        padding-top: 7rem;
         display: flex;
-        padding: 8px 20px 8px 0px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-
-        .post {
-          width: 100%;
-          display: flex;
-          padding: 18px;
-          align-items: flex-start;
-          align-content: flex-start;
-          gap: 10px 12px;
-          align-self: stretch;
-          flex-wrap: wrap;
-
-          .containerCategory {
-            display: flex;
-            padding: 2px 6.09px 2px 4px;
-            align-items: flex-start;
-            border-radius: 4px;
-            background: $color-primary-eight;
-
-            h4 {
-              font-size: 1.2rem;
-              font-weight: 700;
-              color: $color-primary;
-              line-height: 125%;
-            }
-          }
-
-          h3 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: $base-primary-color;
-          }
-
-          .continue {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            align-self: stretch;
-
-            a {
-              font-size: 1.4rem;
-              font-weight: 400;
-              color: $color-primary-eight;
-              text-decoration: none;
-            }
-          }
-        }
+        flex-direction: row;
       }
     }
 
     .cardsArticles {
       width: 100%;
-      padding-top: $padding-top;
+      padding-top: 10rem;
       // display: flex;
       // flex-direction: column;
       // align-items: flex-start;
@@ -152,7 +103,15 @@
         margin: auto;
       }
 
+      h1 {
+        color: $base-primary-color;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 700;
+      }
+
       .cards {
+        padding-top: 7rem;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
         // grid-template-columns: 1fr 1fr 1fr;

@@ -1,0 +1,107 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.section {
+  display: flex;
+
+  .image {
+    width: 100%;
+    max-width: 576px;
+    padding: 17px 63px;
+  }
+
+  .posts {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    .post {
+      width: 100%;
+      display: flex;
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+      align-items: flex-start;
+      align-content: flex-start;
+      flex-direction: column;
+      gap: 10px 12px;
+      align-self: stretch;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $base-secondary-color;
+      margin-left: 2rem;
+      transition: ease-in 0.3s;
+
+      &:hover {
+        transition: ease-in 0.3s;
+        padding-left: 0.5rem;
+
+        h3 {
+          transition: 0.3s;
+          color: $color-primary-eight;
+          text-decoration: underline;
+        }
+      }
+
+      //   &:nth-last-child(even) {
+      //     border-bottom: 1px solid red;
+      //   }
+
+      .containerCategory {
+        display: flex;
+        padding: 2px 6.09px 2px 4px;
+        align-items: flex-start;
+        border-radius: 4px;
+        background: $color-primary-eight;
+        transition: 0.3s;
+
+        &:hover {
+          background: none;
+          transition: 0.3s;
+        }
+
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: $color-primary;
+          line-height: 125%;
+          transition: 0.3s;
+
+          &:hover {
+            color: $color-primary-eight;
+            transition: 0.3s;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $base-primary-color;
+        transition: 0.3s;
+      }
+
+      .continue {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        align-self: stretch;
+        padding-bottom: 1rem;
+
+        &:hover {
+          @include continue-reading;
+          color: $color-primary-eight;
+        }
+
+        a {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: $color-primary-eight;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -10,6 +10,8 @@ import CardPostHome from "@/components/CardPostHome/CardPostHome";
 import { Loading } from "@/components/ui/Loading/Loading";
 import { GetServerSideProps } from "next";
 import { client } from "@/lib/apollo";
+import CardPostMostRecent from "@/components/CardPostMostRecent/CardPostMostRecent";
+import BanerCardPostMostRecent from "@/components/BanerCardPostMostRecent/BanerCardPostMostRecent";
 
 const GET_ALL_SUPPORT_MATERIAL = gql`
   query GetSupportMaterial {
@@ -127,65 +129,56 @@ export default function Home({ posts }: AllPosts) {
             </Link>
           </div>
         </section>
-        <section className={styles.section}>
-          <div className={styles.image}>
-            <Image
-              src="/coins.jpg"
-              width={450}
-              height={342}
-              alt="moedas empilhadas"
-            />
-          </div>
-          <div className={styles.posts}>
-            <div className={styles.post}>
-              <div className={styles.containerCategory}>
-                <h4>Para simplificar a vida</h4>
-              </div>
-              <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              </h3>
-              <div className={styles.continue}>
-                <Link className={roboto.className} href="/">
-                  Continuar lendo
-                </Link>
-                <Image src="/continue.svg" alt="" width={15} height={12} />
-              </div>
+
+        <section className={styles.CardPostMostRecent}>
+          <h1 className={sora.className}>
+            No Radar Financeiro: Descubra o Que Estamos Discutindo nos Artigos
+            Recentes!
+          </h1>
+          <div className={styles.containerCardPostMostRecent}>
+            <div className={styles.baner}>
+              {posts.map((post, index) => {
+                if (index == 0) {
+                  return (
+                    <BanerCardPostMostRecent
+                      key={post.id}
+                      title={post.title}
+                      createdAt={post.createdAt}
+                      urlImage={post.coverImage.url}
+                      category={post.category}
+                      author={post.author.name}
+                      slug={post.slug}
+                    />
+                  );
+                }
+              })}
             </div>
-            <div className={styles.post}>
-              <div className={styles.containerCategory}>
-                <h4>Para simplificar a vida</h4>
-              </div>
-              <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              </h3>
-              <div className={styles.continue}>
-                <Link className={roboto.className} href="/">
-                  Continuar lendo
-                </Link>
-                <Image src="/continue.svg" alt="" width={15} height={12} />
-              </div>
-            </div>
-            <div className={styles.post}>
-              <div className={styles.containerCategory}>
-                <h4>Para simplificar a vida</h4>
-              </div>
-              <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              </h3>
-              <div className={styles.continue}>
-                <Link className={roboto.className} href="/">
-                  Continuar lendo
-                </Link>
-                <Image src="/continue.svg" alt="" width={15} height={12} />
-              </div>
+
+            <div className={styles.cardPostMostRecent}>
+              {posts.map((post, index) => {
+                if (index >= 1 && index <= 3) {
+                  return (
+                    <CardPostMostRecent
+                      key={post.id}
+                      title={post.title}
+                      createdAt={post.createdAt}
+                      urlImage={post.coverImage.url}
+                      category={post.category}
+                      slug={post.slug}
+                    />
+                  );
+                }
+              })}
             </div>
           </div>
         </section>
 
         <section className={styles.cardsArticles}>
+          <h1 className={sora.className}>Mais Artigos</h1>
+
           <div className={styles.cards}>
             {posts.map((post, index) => {
-              if (index <= 5) {
+              if (index >= 4 && index <= 9) {
                 return (
                   <CardPostHome
                     key={post.id}
