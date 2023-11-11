@@ -1,3 +1,5 @@
+/* Header.module.scss */
+
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
@@ -15,6 +17,19 @@
 
     padding: 1rem;
     margin: auto;
+
+    .hamburger-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .hamburger-btn {
+      display: block; /* Mostrar em telas menores */
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #fff; // Adicione a cor desejada
+    }
   }
 
   .navBar {

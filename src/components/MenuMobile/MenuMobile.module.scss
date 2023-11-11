@@ -1,0 +1,70 @@
+/* MenuMobile.module.scss */
+
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+// body.menuOpen {
+//   overflow: hidden;
+// }
+
+.containerMenu {
+  position: fixed;
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgb(28, 28, 27);
+  background: linear-gradient(
+    34deg,
+    rgba(28, 28, 27, 0.95) 0%,
+    rgba(0, 65, 101, 0.95) 95%
+  );
+
+  .img {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  nav {
+    .navBar {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+
+      a {
+        text-decoration: none;
+        color: $color-primary-eight;
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 1.5rem;
+
+        &:hover {
+          color: $color-primary-three;
+          transition: 0.3s;
+        }
+      }
+
+      .btn {
+        @include styles-button;
+        color: $color-primary-eight;
+      }
+    }
+  }
+
+  &.visible {
+    display: flex;
+  }
+}

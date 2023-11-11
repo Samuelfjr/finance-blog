@@ -1,10 +1,25 @@
+// ...
+
 import { roboto } from "@/styles/fonts";
 import Link from "next/link";
 import Logo from "@/components/ui/Logo/logo";
 
 import styles from "./Header.module.scss";
+import { useState } from "react";
+import { MenuMobile } from "../MenuMobile/MenuMobile";
 
-const Header = () => {
+interface HeaderProps {
+  setMenuIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Header: React.FC<HeaderProps> = ({ setMenuIsVisible }) => {
+  const [localMenuIsVisible, setLocalMenuIsVisible] = useState(false);
+
+  const toggleMenuVisibility = () => {
+    setLocalMenuIsVisible(!localMenuIsVisible);
+    setMenuIsVisible(!localMenuIsVisible);
+  };
+
   return (
     <section className={styles.header}>
       <div className={styles.containerHeader}>
@@ -23,11 +38,21 @@ const Header = () => {
             <Link href="#contact">Contato</Link>
           </li>
           <li>
+            <button className={styles.btn} onClick={toggleMenuVisibility}>
+              Abrir Menu
+            </button>
+          </li>
+          <li>
             <Link className={styles.btn} href="/article">
               Artigos
             </Link>
           </li>
         </ul>
+
+        <MenuMobile
+          menuIsVisible={localMenuIsVisible}
+          setMenuIsVisible={setLocalMenuIsVisible}
+        />
       </div>
     </section>
   );
