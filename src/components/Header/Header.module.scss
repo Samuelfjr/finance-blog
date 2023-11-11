@@ -10,50 +10,73 @@
 
   .containerHeader {
     max-width: 1140px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 1rem;
     margin: auto;
 
-    .hamburger-container {
-      display: flex;
-      align-items: center;
-    }
-
     .hamburger-btn {
-      display: block; /* Mostrar em telas menores */
+      display: none; /* Oculta por padrão em telas maiores que 768px */
       background: none;
       border: none;
       font-size: 2rem;
       color: #fff; // Adicione a cor desejada
-    }
-  }
+      cursor: pointer;
 
-  .navBar {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 1.5rem;
-
-    a {
-      text-decoration: none;
-      // color: $navigation-text-color;
-      color: $color-primary;
-      font-size: 1.6rem;
-      font-weight: 500;
-      padding: 1.5rem;
-
-      &:hover {
-        color: $color-primary-three;
-        transition: 0.3s;
+      @include device(tablet) {
+        display: block; /* Mostra o botão apenas em telas menores que 768px */
       }
     }
 
-    .btn {
-      @include styles-button;
+    .navBar {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: $color-primary;
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 1.5rem;
+
+        &:hover {
+          color: $color-primary-three;
+          transition: 0.3s;
+        }
+
+        @include device(tablet) {
+          display: none; /* Oculta os links em telas de tablet */
+        }
+      }
+
+      .btn {
+        @include styles-button;
+
+        @include device(tablet) {
+          display: none; /* Oculta o botão em telas de tablet */
+        }
+      }
+    }
+    .containerMenu {
+      display: none; /* Oculta o containerMenu por padrão */
+
+      @include device(tablet) {
+        display: flex; /* Mostra o containerMenu em telas de tablet */
+      }
+
+      .menu {
+        display: none; /* Oculta o botão por padrão */
+        cursor: pointer;
+        background: none;
+        border: none;
+
+        @include device(tablet) {
+          display: block; /* Mostra o botão apenas em telas menores que tablet */
+        }
+      }
     }
   }
 }

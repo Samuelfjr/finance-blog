@@ -32,8 +32,8 @@ export function MenuMobile({
         className={styles.img}
         src="/close.svg"
         alt=""
-        width={45}
-        height={45}
+        width={32}
+        height={32}
         onClick={() => setMenuIsVisible(false)}
       />
       <nav>
