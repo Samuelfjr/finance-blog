@@ -77,6 +77,15 @@
         padding-top: 7rem;
         display: flex;
         flex-direction: row;
+
+        @include device(notebook) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .baner {
+          margin: 0 auto;
+        }
       }
     }
 
