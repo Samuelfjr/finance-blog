@@ -76,15 +76,15 @@
       .containerCardPostMostRecent {
         padding-top: 7rem;
         display: flex;
-        flex-direction: row;
 
         @include device(notebook) {
-          display: flex;
           flex-direction: column;
         }
 
         .baner {
-          margin: 0 auto;
+          @include device(notebook) {
+            margin: auto;
+          }
         }
       }
     }
@@ -176,6 +176,12 @@
         display: flex;
         align-items: center;
 
+        @include device(tablet) {
+          background: none;
+          flex-direction: column-reverse;
+          height: 100%;
+        }
+
         Image {
         }
 
@@ -195,6 +201,10 @@
             color: $quarternary-text-color;
             font-size: 1.6rem;
             font-weight: 400;
+
+            @include device(tablet) {
+              padding-bottom: 5rem;
+            }
           }
         }
       }
@@ -219,33 +229,38 @@
         gap: 20px;
 
         @include device(notebook) {
+          @include flex-center;
           flex-direction: column;
         }
-
-        .img {
+      }
+      .img {
+        @include device(notebook) {
           width: 100%;
+        }
+        @include device(tablet) {
+          width: 80%;
+          height: 35rem;
+        }
+        @include device(mobile) {
+          height: 100%;
+        }
+      }
 
-          @include device(notebook) {
-            @include flex-center;
-          }
+      .subtitleDescription {
+        display: flex;
+        padding: 10px 10px 10px 0px;
+        flex-direction: column;
+        gap: 25px;
+
+        h3 {
+          color: $base-primary-color;
+          font-size: 3rem;
+          font-weight: 600;
         }
 
-        .subtitleDescription {
-          display: flex;
-          padding: 10px 10px 10px 0px;
-          flex-direction: column;
-          gap: 25px;
-
-          h3 {
-            color: $base-primary-color;
-            font-size: 3rem;
-            font-weight: 600;
-          }
-
-          p {
-            color: $quarternary-text-color;
-            font-size: 1.6rem;
-          }
+        p {
+          color: $quarternary-text-color;
+          font-size: 1.6rem;
         }
       }
     }

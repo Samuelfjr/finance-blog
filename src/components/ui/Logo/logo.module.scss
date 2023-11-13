@@ -1,0 +1,14 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.logo {
+  width: 100%;
+
+  @include device(tablet) {
+    width: 80%;
+  }
+
+  @include device(mobile) {
+    width: 60%;
+  }
+}

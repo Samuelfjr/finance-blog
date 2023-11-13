@@ -23,7 +23,9 @@ const Header: React.FC<HeaderProps> = ({ setMenuIsVisible }) => {
   return (
     <section className={styles.header}>
       <div className={styles.containerHeader}>
-        <Logo />
+        <div className={styles.containerLogo}>
+          <Logo />
+        </div>
 
         <ul className={styles.navBar}>
           <li>

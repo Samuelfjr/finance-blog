@@ -204,7 +204,7 @@ export default function Home({ posts }: AllPosts) {
         </section>
         <section className={styles.about}>
           <div className={styles.containerAbout}>
-            <div>
+            <div className={styles.containerImg}>
               <Image
                 src="/perfil.jpg"
                 alt="foto de perfil do autor"
@@ -229,8 +229,9 @@ export default function Home({ posts }: AllPosts) {
               Blog: O seu guia completo para dominar as finanças.
             </h1>
             <div className={styles.imageSubtitle}>
-              <div className={styles.img}>
+              <div className={styles.containerImage}>
                 <Image
+                  className={styles.img}
                   src="/pen-paper-ebook.jpg"
                   alt="ebook, caneta e caderno"
                   width={565}

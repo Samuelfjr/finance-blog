@@ -34,6 +34,10 @@
       top: 65%;
       height: 10.2rem;
 
+      @include device(notebook-large) {
+        height: 34%;
+      }
+
       header {
         transition: 0.3s;
       }
