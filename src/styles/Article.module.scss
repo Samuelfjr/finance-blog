@@ -2,8 +2,13 @@
 @import "../styles/variables.scss";
 
 .articles {
-  width: 100%;
+  width: 80%;
   max-width: 1440px;
   margin: auto;
-  padding: $padding-top;
+  padding-top: $padding-top;
+  padding-bottom: $padding-top;
+
+  @include device(notebook) {
+    width: 95%;
+  }
 }

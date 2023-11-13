@@ -3,10 +3,13 @@
 
 .post {
   width: 100%;
-  display: flex;
-  align-items: center;
+
+  @include flex-center;
   gap: 3.5rem;
   max-width: 1440px;
+
+  background-color: $sexternary-text-color;
+  border-radius: 1rem;
 
   &:hover {
     @include styles-card-hover;
@@ -19,8 +22,9 @@
   }
 
   @include device(tablet) {
-    flex-direction: column;
-    max-width: 50rem;
+    // flex-direction: column;
+    // max-width: 50rem;
+    margin: 0 auto;
   }
 
   &:not(:last-of-type) {
@@ -35,13 +39,17 @@
     cursor: pointer;
   }
 
+  @media only screen and (max-width: 605px) {
+    flex-direction: column;
+  }
+
   .containerImage {
     width: 40%;
     height: 20rem;
     overflow: hidden;
 
     @include device(notebook) {
-      width: 80%;
+      width: auto;
     }
 
     @include device(tablet) {
@@ -61,6 +69,9 @@
       @include device(notebook-large) {
         min-width: 28rem;
       }
+
+      @include device(notebook) {
+      }
     }
   }
 
@@ -68,7 +79,7 @@
     width: 100%;
 
     .containerCategory {
-      width: 20%;
+      width: 50%;
 
       .category {
         width: 100%;
