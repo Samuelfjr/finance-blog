@@ -10,6 +10,7 @@ import { client } from "@/lib/apollo";
 import { format } from "date-fns";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { ElementNode } from "@graphcms/rich-text-types";
+import Page from "@/components/Page";
 
 const GET_POST = gql`
   query GetPost($slugPost: String) {
@@ -34,6 +35,7 @@ const GET_POST = gql`
 interface PostProps {
   post: {
     id: string;
+    slug: string;
     title: string;
     subtitle: string;
     coverImage: {
@@ -53,43 +55,45 @@ export default function Post({ post }: PostProps) {
   console.log(post);
 
   return (
-    <section className={styles.post}>
-      <div className={styles.heading}>
-        <h1 className={sora.className}>{post.title}</h1>
-        <h4 className={roboto.className}>{post.subtitle}</h4>
-        <div className={styles.containerAuthor}>
-          <div className={styles.author}>
-            <div className={styles.contentAuthor}>
-              <p className={styles.name}>{post.author.name}</p>
-              <p className={styles.date}>
-                {format(new Date(post.createdAt), "dd/MM/yyyy")}
-              </p>
+    <Page title={post.title} description={post.subtitle}>
+      <section className={styles.post}>
+        <div className={styles.heading}>
+          <h1 className={sora.className}>{post.title}</h1>
+          <h4 className={roboto.className}>{post.subtitle}</h4>
+          <div className={styles.containerAuthor}>
+            <div className={styles.author}>
+              <div className={styles.contentAuthor}>
+                <p className={styles.name}>{post.author.name}</p>
+                <p className={styles.date}>
+                  {format(new Date(post.createdAt), "dd/MM/yyyy")}
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <article className={styles.content}>
-        <div className={styles.containerImage}>
-          <Image
-            className={styles.img}
-            src={post.coverImage.url}
-            alt=""
-            width={367}
-            height={200}
-          />
-        </div>
-        <div className={styles.containerText}>
-          <RichText
-            content={post.content.json}
-            renderers={{
-              p: ({ children }) => (
-                <p className={roboto.className}>{children}</p>
-              ),
-            }}
-          />
-        </div>
-      </article>
-    </section>
+        <article className={styles.content}>
+          <div className={styles.containerImage}>
+            <Image
+              className={styles.img}
+              src={post.coverImage.url}
+              alt=""
+              width={367}
+              height={200}
+            />
+          </div>
+          <div className={styles.containerText}>
+            <RichText
+              content={post.content.json}
+              renderers={{
+                p: ({ children }) => (
+                  <p className={roboto.className}>{children}</p>
+                ),
+              }}
+            />
+          </div>
+        </article>
+      </section>
+    </Page>
   );
 }
 
