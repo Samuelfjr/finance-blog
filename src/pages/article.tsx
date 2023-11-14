@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { roboto, sora } from "@/styles/fonts";
+import Link from "next/link";
 import styles from ".././styles/Article.module.scss";
 import CardPost from "../components/CardPost/CardPost";
 import { useQuery, gql } from "@apollo/client";
@@ -54,6 +56,28 @@ export default function Article({ posts }: AllPosts) {
       description="Descubra insights valiosos sobre finanças em nossa coleção de artigos. Leve seu conhecimento financeiro para o próximo nível com dicas, análises e orientações especializadas."
     >
       <article className={styles.articles}>
+        <header>
+          <div className={styles.containerLink}>
+            <Link className={roboto.className} href="/">
+              Home
+            </Link>
+            <div className={styles.containerArrow}>
+              <Image
+                className={styles.arrow}
+                src="/arrow.svg"
+                alt=""
+                width={12}
+                height={12}
+              />
+            </div>
+            <p className={roboto.className}>Artigos</p>
+          </div>
+          <h1 className={sora.className}>
+            Explore Nossos Artigos: Conhecimento Financeiro para Transformar sua
+            Vida
+          </h1>
+        </header>
+
         {posts.map((post, index) => {
           return (
             <CardPost

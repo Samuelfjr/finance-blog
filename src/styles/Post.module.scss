@@ -79,10 +79,11 @@
     }
 
     .containerText {
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
 
-      .p {
-        font-size: 2.6rem;
+      p {
+        font-size: 1.6rem;
         line-height: 2.4rem;
         font-weight: 400;
       }

@@ -11,4 +11,38 @@
   @include device(notebook) {
     width: 95%;
   }
+
+  header {
+    width: 100%;
+
+    .containerLink {
+      @include flex-center;
+      padding-bottom: 5rem;
+
+      a {
+        color: $navigation-text-color;
+        text-decoration: none;
+        font-size: 1.6rem;
+      }
+
+      .containerArrow {
+        padding: 0 1.2rem;
+      }
+
+      p {
+        color: $navigation-text-color;
+        text-decoration: none;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2.8rem;
+    color: $color-primary;
+    text-align: center;
+    padding-bottom: 8rem;
+    text-wrap: pretty;
+  }
 }
