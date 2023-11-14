@@ -11,6 +11,7 @@ import { format } from "date-fns";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { ElementNode } from "@graphcms/rich-text-types";
 import Page from "@/components/Page";
+import Link from "next/link";
 
 const GET_POST = gql`
   query GetPost($slugPost: String) {
@@ -57,6 +58,24 @@ export default function Post({ post }: PostProps) {
   return (
     <Page title={post.title} description={post.subtitle}>
       <section className={styles.post}>
+        <header>
+          <div className={styles.containerLink}>
+            <Link className={roboto.className} href="/">
+              Home
+            </Link>
+            <div className={styles.containerArrow}>
+              <Image src="/arrow.svg" alt="" width={12} height={12} />
+            </div>
+            <Link className={roboto.className} href="/article">
+              Artigo
+            </Link>
+            <div className={styles.containerArrow}>
+              <Image src="/arrow.svg" alt="" width={12} height={12} />
+            </div>
+            <p className={roboto.className}>{post.title}</p>
+          </div>
+        </header>
+
         <div className={styles.heading}>
           <h1 className={sora.className}>{post.title}</h1>
           <h4 className={roboto.className}>{post.subtitle}</h4>
