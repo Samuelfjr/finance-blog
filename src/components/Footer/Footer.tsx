@@ -17,7 +17,7 @@ const Footer = () => {
         </p>
         <div className={styles.containerIcons}>
           <div className={styles.container}>
-            <Link id="contact" href="/">
+            <Link id="contact" href="https://wa.me/5512997552882">
               <Image
                 src="/whatsapp.svg"
                 alt="whatsapp"

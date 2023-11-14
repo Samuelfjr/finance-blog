@@ -5,6 +5,8 @@ import { useQuery, gql } from "@apollo/client";
 import { GetServerSideProps } from "next";
 import { client } from "@/lib/apollo";
 
+import Page from "../components/Page";
+
 const GET_ALL_POSTS = gql`
   query GetAllPosts {
     posts(orderBy: createdAt_DESC) {
@@ -47,22 +49,27 @@ export default function Article({ posts }: AllPosts) {
   // console.log(data?.posts);
 
   return (
-    <article className={styles.articles}>
-      {posts.map((post, index) => {
-        return (
-          <CardPost
-            key={post.id}
-            title={post.title}
-            author={post.author.name}
-            createdAt={post.createdAt}
-            subtitle={post.subtitle}
-            urlImage={post.coverImage.url}
-            category={post.category}
-            slug={post.slug}
-          />
-        );
-      })}
-    </article>
+    <Page
+      title="Artigos de Finanças: Dicas, Notícias e Orientações Financeiras"
+      description="Descubra insights valiosos sobre finanças em nossa coleção de artigos. Leve seu conhecimento financeiro para o próximo nível com dicas, análises e orientações especializadas."
+    >
+      <article className={styles.articles}>
+        {posts.map((post, index) => {
+          return (
+            <CardPost
+              key={post.id}
+              title={post.title}
+              author={post.author.name}
+              createdAt={post.createdAt}
+              subtitle={post.subtitle}
+              urlImage={post.coverImage.url}
+              category={post.category}
+              slug={post.slug}
+            />
+          );
+        })}
+      </article>
+    </Page>
   );
 }
 
