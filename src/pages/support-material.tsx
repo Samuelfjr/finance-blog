@@ -1,12 +1,14 @@
 import { GetServerSideProps } from "next";
 import styles from ".././styles/SupportMaterial.module.scss";
 import CardMaterial from "../components/CardMaterial/CardMaterial";
-import { sora } from "@/styles/fonts";
+import { roboto, sora } from "@/styles/fonts";
+import Image from "next/image";
 
 import { useQuery, gql } from "@apollo/client";
 import { client } from "@/lib/apollo";
 
 import Page from "../components/Page";
+import Link from "next/link";
 
 const GET_ALL_SUPPORT_MATERIAL = gql`
   query GetSupportMaterial {
@@ -48,6 +50,16 @@ export default function SupportMaterial({
     >
       <section className={styles.supportMaterial}>
         <header>
+          <div className={styles.containerLink}>
+            <Link className={roboto.className} href="/">
+              Home
+            </Link>
+            <div className={styles.containerArrow}>
+              <Image src="/arrow.svg" alt="" width={12} height={12} />
+            </div>
+            <p className={roboto.className}>Materiais de Apoio</p>
+          </div>
+
           <h1 className={sora.className}>
             Explore Nosso Material de Apoio e Transforme Suas Finanças Hoje
             Mesmo
