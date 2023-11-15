@@ -67,7 +67,7 @@ export default function Post({ post }: PostProps) {
               <Image src="/arrow.svg" alt="" width={12} height={12} />
             </div>
             <Link className={roboto.className} href="/article">
-              Artigo
+              Artigos
             </Link>
             <div className={styles.containerArrow}>
               <Image src="/arrow.svg" alt="" width={12} height={12} />
