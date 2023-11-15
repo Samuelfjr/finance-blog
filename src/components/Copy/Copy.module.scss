@@ -15,9 +15,21 @@
     width: 100%;
     max-width: 1140px;
     padding: 1.5rem;
-
+    flex-direction: column;
     p {
       color: $base-primary-color;
+    }
+
+    a {
+      padding-top: 1rem;
+      color: $quinternary-text-color;
+      text-decoration: none;
+      font-size: 1.2rem;
+
+      b {
+        text-decoration: underline;
+        color: $color-primary-eight;
+      }
     }
   }
 }
