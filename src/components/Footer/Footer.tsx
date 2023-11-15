@@ -1,4 +1,4 @@
-import { roboto } from "@/styles/fonts";
+import { roboto, sora } from "@/styles/fonts";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,6 +33,20 @@ const Footer = () => {
                 height={24}
               />
             </Link>
+            <div className={styles.containerNavigationBlog}>
+              <header>
+                <h4 className={sora.className}>Navegue pelo Blog</h4>
+              </header>
+              <Link className={roboto.className} href="/">
+                Home
+              </Link>
+              <Link className={roboto.className} href="/support-material">
+                Material de Apoio
+              </Link>
+              <Link className={roboto.className} href="/article">
+                Artigos
+              </Link>
+            </div>
             <div className={styles.containerBoxUp}>
               <Link href="#home">
                 <div className={styles.boxUp}>

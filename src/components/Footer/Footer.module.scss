@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .footer {
   width: 100%;
@@ -34,15 +35,51 @@
     .containerIcons {
       width: 100%;
       max-width: 1140px;
+
       .container {
         width: 100%;
         max-width: 1140px;
         display: flex;
         align-items: center;
+        display: flex;
 
         .instagramIcon {
           padding-left: 1.5rem;
         }
+
+        .containerNavigationBlog {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding-left: 10%;
+
+          @include device(mobile) {
+            padding-left: 20%;
+          }
+
+          header {
+            h4 {
+              font-size: 1.6rem;
+              font-weight: 600;
+              padding-bottom: 1rem;
+              color: $color-primary;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 1rem 0;
+            color: $base-tertiary-color;
+
+            &:hover {
+              transition: 0.3s;
+              color: $color-primary;
+            }
+          }
+        }
+
         .containerBoxUp {
           width: 100%;
           display: flex;
