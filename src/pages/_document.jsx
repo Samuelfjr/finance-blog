@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
+        <link rel="shortcut icon" href="R.ico" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
       <body>
