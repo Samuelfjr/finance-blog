@@ -46,9 +46,6 @@
 
   .containerSupportMaterial {
     margin: 6rem auto;
-    // display: flex;
-    // justify-content: center;
-    // align-items: flex-start;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 24.5rem;

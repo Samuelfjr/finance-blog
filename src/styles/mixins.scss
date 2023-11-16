@@ -21,8 +21,6 @@
   opacity: 1;
 
   &:hover {
-    // color: $color-primary-eight;
-    // background-color: $color-primary;
     color: $color-primary;
     background-color: $color-primary-eight;
     transition: 0.3s;
@@ -53,7 +51,6 @@
 
 @mixin continue-reading {
   transition: all 0.3s;
-  // color: $color-primary-eight;
   color: $color-primary;
   text-decoration: underline;
 }

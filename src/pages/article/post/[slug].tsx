@@ -1,12 +1,9 @@
 import { roboto, sora } from "@/styles/fonts";
 import Image from "next/image";
-// import styles from "../../styles/Post.module.scss";
 import styles from "../../../styles/Post.module.scss";
-
 import { gql } from "@apollo/client";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { client } from "@/lib/apollo";
-
 import { format } from "date-fns";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { ElementNode } from "@graphcms/rich-text-types";

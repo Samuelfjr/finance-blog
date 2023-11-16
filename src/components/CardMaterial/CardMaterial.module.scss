@@ -28,7 +28,6 @@
         -moz-transition: all 0.5s;
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
-
         @include device(notebook-large) {
           width: 100%;
         }
@@ -42,7 +41,6 @@
       flex-direction: column;
       align-self: stretch;
       border-radius: 20px 20px 0px 0px;
-
       background-color: $color-primary;
       top: 17rem;
       z-index: 10;
@@ -66,7 +64,6 @@
         @include flex-center;
         margin: 0 auto;
         padding: 8px 16px;
-
         border-radius: 10px;
 
         a {

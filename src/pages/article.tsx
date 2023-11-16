@@ -6,7 +6,6 @@ import CardPost from "../components/CardPost/CardPost";
 import { useQuery, gql } from "@apollo/client";
 import { GetServerSideProps } from "next";
 import { client } from "@/lib/apollo";
-
 import Page from "../components/Page";
 
 const GET_ALL_POSTS = gql`
@@ -47,9 +46,6 @@ interface AllPosts {
   }[];
 }
 export default function Article({ posts }: AllPosts) {
-  // const { loading, data, error } = useQuery<AllPosts>(GET_ALL_POSTS);
-  // console.log(data?.posts);
-
   return (
     <Page
       title="Artigos de Finanças: Dicas, Notícias e Orientações Financeiras"

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { gql, useQuery } from "@apollo/client";
 import router, { useRouter } from "next/router";
-
 import { sora, roboto } from "@/styles/fonts";
 import styles from "../styles/Home.module.scss";
 import CardMaterial from "../components/CardMaterial/CardMaterial";
@@ -12,7 +11,6 @@ import { GetServerSideProps } from "next";
 import { client } from "@/lib/apollo";
 import CardPostMostRecent from "@/components/CardPostMostRecent/CardPostMostRecent";
 import BanerCardPostMostRecent from "@/components/BanerCardPostMostRecent/BanerCardPostMostRecent";
-
 import Page from "../components/Page";
 
 const GET_ALL_SUPPORT_MATERIAL = gql`
@@ -44,11 +42,6 @@ interface AllSupportMaterial {
     };
   }[];
 }
-
-// const { loading, data, error } = useQuery<AllSupportMaterial>(
-//   GET_ALL_SUPPORT_MATERIAL
-// );
-// console.log(data?.supportMaterials);
 
 const GET_ALL_POSTS = gql`
   query GetAllPosts {
@@ -87,12 +80,6 @@ interface AllPosts {
   }[];
 }
 export default function Home({ posts }: AllPosts) {
-  // { supportMaterials }: AllSupportMaterial
-  // const router = useRouter();s
-  // //Filter Posts
-  // const searchFor = router.query.search || null;
-  // const foundPosts = posts.filter();
-
   const { loading, data, error } = useQuery<AllSupportMaterial>(
     GET_ALL_SUPPORT_MATERIAL
   );
@@ -280,7 +267,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return {
     props: {
       posts: data.posts,
-      // supportMaterials: data.supportMaterials,
     },
   };
 };

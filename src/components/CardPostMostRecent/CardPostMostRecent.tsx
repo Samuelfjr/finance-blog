@@ -2,9 +2,7 @@ import styles from "../CardPostMostRecent/CardPostMostRecent.module.scss";
 import { sora, roboto } from "@/styles/fonts";
 import Link from "next/link";
 import Image from "next/image";
-
 import React, { useState } from "react";
-import BanerCardPostMostRecent from "../BanerCardPostMostRecent/BanerCardPostMostRecent";
 
 interface CardPostMostRecentProps {
   title: string;

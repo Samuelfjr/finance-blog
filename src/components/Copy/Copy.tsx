@@ -1,5 +1,4 @@
 import { roboto } from "@/styles/fonts";
-import Image from "next/image";
 import Link from "next/link";
 import { sora } from "@/styles/fonts";
 

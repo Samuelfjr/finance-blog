@@ -15,15 +15,15 @@
     margin: auto;
 
     .hamburger-btn {
-      display: none; /* Oculta por padrão em telas maiores que 768px */
+      display: none;
       background: none;
       border: none;
       font-size: 2rem;
-      color: #fff; // Adicione a cor desejada
+      color: #fff;
       cursor: pointer;
 
       @include device(tablet) {
-        display: block; /* Mostra o botão apenas em telas menores que 768px */
+        display: block;
       }
     }
 
@@ -46,7 +46,7 @@
         }
 
         @include device(tablet) {
-          display: none; /* Oculta os links em telas de tablet */
+          display: none;
         }
       }
 
@@ -54,25 +54,24 @@
         @include styles-button;
 
         @include device(tablet) {
-          display: none; /* Oculta o botão em telas de tablet */
+          display: none; 
         }
       }
     }
     .containerMenu {
-      display: none; /* Oculta o containerMenu por padrão */
-
+      display: none; 
       @include device(tablet) {
-        display: flex; /* Mostra o containerMenu em telas de tablet */
+        display: flex; 
       }
 
       .menu {
-        display: none; /* Oculta o botão por padrão */
+        display: none; 
         cursor: pointer;
         background: none;
         border: none;
 
         @include device(tablet) {
-          display: block; /* Mostra o botão apenas em telas menores que tablet */
+          display: block; 
         }
       }
     }

@@ -3,10 +3,8 @@ import styles from ".././styles/SupportMaterial.module.scss";
 import CardMaterial from "../components/CardMaterial/CardMaterial";
 import { roboto, sora } from "@/styles/fonts";
 import Image from "next/image";
-
-import { useQuery, gql } from "@apollo/client";
+import { gql } from "@apollo/client";
 import { client } from "@/lib/apollo";
-
 import Page from "../components/Page";
 import Link from "next/link";
 

@@ -4,12 +4,6 @@
 .section {
   display: flex;
 
-  // @include device(notebook-large) {
-  //   background-color: aqua;
-  //   width: 100%;
-  //   margin: auto;
-  // }
-
   .image {
     width: 100%;
     max-width: 576px;
@@ -49,10 +43,6 @@
           text-decoration: underline;
         }
       }
-
-      //   &:nth-last-child(even) {
-      //     border-bottom: 1px solid red;
-      //   }
 
       .containerCategory {
         display: flex;

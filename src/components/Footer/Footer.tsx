@@ -1,7 +1,6 @@
 import { roboto, sora } from "@/styles/fonts";
 import Image from "next/image";
 import Link from "next/link";
-
 import styles from "./Footer.module.scss";
 import Logo from "../ui/Logo/logo";
 

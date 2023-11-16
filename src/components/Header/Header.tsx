@@ -1,9 +1,6 @@
-import { roboto } from "@/styles/fonts";
 import Link from "next/link";
 import Image from "next/image";
-
 import Logo from "@/components/ui/Logo/logo";
-
 import styles from "./Header.module.scss";
 import { useState } from "react";
 import { MenuMobile } from "../MenuMobile/MenuMobile";
