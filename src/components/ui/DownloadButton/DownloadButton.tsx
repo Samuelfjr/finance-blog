@@ -55,6 +55,7 @@ const DownloadButton: React.FC = () => {
       {data.supportMaterials.map((material: any) => (
         <div key={material.id} className={styles.buttonContent}>
           <button
+            className={styles.button}
             onClick={() => {
               const extension = getExtension(material.content.url);
               handleDownload(

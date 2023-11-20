@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.buttonContent {
+  .button {
+    @include styles-button;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $color-primary-eight;
+    text-decoration: none;
+    background-color: $color-primary;
+  }
+}
