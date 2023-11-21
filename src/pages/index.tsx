@@ -112,9 +112,11 @@ export default function Home({ posts }: AllPosts) {
                       subtitle={supportMaterial.subtitle}
                       image={supportMaterial.image.url}
                       context={supportMaterial.content.url}
+                      materialId={supportMaterial.id} // Incluindo materialId
                     />
                   );
                 }
+                return null;
               })}
             </div>
 

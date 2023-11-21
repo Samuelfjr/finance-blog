@@ -2,6 +2,10 @@
 @import "../../../styles/mixins.scss";
 
 .buttonContent {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+
   .button {
     @include styles-button;
     font-size: 1.4rem;

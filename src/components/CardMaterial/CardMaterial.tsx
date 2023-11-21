@@ -4,10 +4,11 @@ import Image from "next/image";
 import DownloadButton from "../ui/DownloadButton/DownloadButton";
 
 interface CardMaterialProps {
-  title?: string; // Adicione esta linha para incluir a propriedade 'title'
+  title?: string;
   subtitle?: string;
   image?: string;
   context?: string;
+  materialId: string; // Adicionando materialId como propriedade obrigatória
 }
 
 const CardMaterial: React.FC<CardMaterialProps> = ({
@@ -15,9 +16,10 @@ const CardMaterial: React.FC<CardMaterialProps> = ({
   subtitle,
   image,
   context,
+  materialId,
 }) => {
-  if (!title || !subtitle || !image || !context) {
-    return null; // Adicione verificações para garantir que todas as propriedades necessárias estejam presentes
+  if (!title || !subtitle || !image || !context || !materialId) {
+    return null;
   }
 
   return (
@@ -38,7 +40,7 @@ const CardMaterial: React.FC<CardMaterialProps> = ({
           <p className={roboto.className}>{subtitle}</p>
 
           <div className={styles.buttonContent}>
-            <DownloadButton />
+            <DownloadButton materialId={materialId} />
           </div>
         </div>
       </div>
