@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { gql, useQuery } from "@apollo/client";
-import router, { useRouter } from "next/router";
 import { sora, roboto } from "@/styles/fonts";
 import styles from "../styles/Home.module.scss";
 import CardMaterial from "../components/CardMaterial/CardMaterial";

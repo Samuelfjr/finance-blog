@@ -8,7 +8,7 @@ interface CardMaterialProps {
   subtitle?: string;
   image?: string;
   context?: string;
-  materialId: string; // Adicionando materialId como propriedade obrigatória
+  materialId: string; 
 }
 
 const CardMaterial: React.FC<CardMaterialProps> = ({

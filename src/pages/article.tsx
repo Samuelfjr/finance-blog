@@ -3,7 +3,7 @@ import { roboto, sora } from "@/styles/fonts";
 import Link from "next/link";
 import styles from ".././styles/Article.module.scss";
 import CardPost from "../components/CardPost/CardPost";
-import { useQuery, gql } from "@apollo/client";
+import { gql } from "@apollo/client";
 import { GetServerSideProps } from "next";
 import { client } from "@/lib/apollo";
 import Page from "../components/Page";
