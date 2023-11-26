@@ -2,11 +2,12 @@ import Image from "next/image";
 import { roboto, sora } from "@/styles/fonts";
 import Link from "next/link";
 import styles from ".././styles/Article.module.scss";
-import CardPost from "../components/CardPost/CardPost";
+// import CardPost from "../components/CardPost/CardPost";
 import { gql } from "@apollo/client";
 import { GetServerSideProps } from "next";
 import { client } from "@/lib/apollo";
 import Page from "../components/Page";
+import CardPost from "@/components/CardPost/CardPost";
 
 const GET_ALL_POSTS = gql`
   query GetAllPosts {

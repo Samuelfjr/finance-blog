@@ -18,6 +18,6 @@
       "@/fonts": ["./styles/fonts"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Header/Header.tsx", "src/pages/index.tsx", "src/pages/_document.jsx", "src/pages/_app.jsx", "src/components/CardPost/CardPost.tsx", "src/components/ui/Logo/logo.jsx", "src/components/Page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Header/Header.tsx", "src/pages/index.tsx", "src/pages/_document.tsx", "src/pages/_app.jsx", "src/components/CardPost/CardPost.tsx", "src/components/ui/Logo/logo.jsx", "src/components/Page.js"],
   "exclude": ["node_modules"]
 }
